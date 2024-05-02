@@ -1,0 +1,24 @@
+:root {
+    --dark-blue: #040B24;
+    --blue: #111C44;
+    --light-blue: #2525A5;
+    --light-blue-hover: #2d2dc7;
+    --red: #df3232;
+    --orange: #E69141;
+    --white: #FFFFFF;
+    --black: #030B23;
+    --gray: #878787;
+    --purple-variance: #9C8FEC;
+}
+
+#app, html, body {
+    background-color: var(--dark-blue);
+    margin: 0px;
+}
+
+.header-container, .welcome-text, .skills-section, .skills-title, .project-section-title, .projects {
+    color: var(--white);
+    font-family: 'Oxanium', sans-serif;
+}
+
+
