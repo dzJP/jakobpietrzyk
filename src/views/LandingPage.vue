@@ -35,13 +35,18 @@
 			My projects
 		</div>
 		<div class="projects">
-			<div class="project-image" :class="{ 'expanded': isImageExpanded }">
-				<img :src="currentImage" alt="project-image" @click="toggleImageSize">
-			</div>
-			<!-- Navigation buttons container outside the project image -->
-			<div class="navigation-buttons" :class="{ 'visible': isImageExpanded }">
-				<button class="button" @click="navigate('previous')">Previous</button>
-				<button class="button" @click="navigate('next')">Next</button>
+			<div class="project-image" :class="{ 'expanded': isImageExpanded }" @click="toggleImageSize"
+				@mouseleave="handleMouseLeave">
+				<img :src="currentImage" alt="project-image">
+				<div class="overlay-text" v-if="!isImageExpanded">
+					Intranet development
+				</div>
+
+				<!-- Move navigation buttons inside the project-image div -->
+				<div class="navigation-buttons" :class="{ 'visible': isImageExpanded }">
+					<button class="button" @click="navigate('previous')">Previous</button>
+					<button class="button" @click="navigate('next')">Next</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -80,8 +85,7 @@ export default {
 				require('@/assets/adminpageEditProject.png'),
 				require('@/assets/homepageAdminRegisterHours.png'),
 				require('@/assets/profilePage.png'),
-				require('@/assets/colleaguesPage.png'),
-
+				require('@/assets/colleaguesPage.png')
 			],
 			currentImageIndex: 0,
 			isImageExpanded: false,
@@ -94,15 +98,28 @@ export default {
 	},
 	methods: {
 		navigate(direction) {
-			if (!this.isImageExpanded) return;
 			if (direction === 'previous') {
 				this.currentImageIndex = (this.currentImageIndex - 1 + this.images.length) % this.images.length;
 			} else if (direction === 'next') {
 				this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
 			}
 		},
-		toggleImageSize() {
-			this.isImageExpanded = !this.isImageExpanded;
+		toggleImageSize(event) {
+			// Check if the click event originates from the image itself
+			if (event.target.tagName.toLowerCase() === 'img') {
+				// Toggle the state of isImageExpanded
+				this.isImageExpanded = !this.isImageExpanded;
+				const overlayText = document.querySelector('.overlay-text');
+				if (overlayText) {
+					overlayText.style.display = this.isImageExpanded ? 'none' : 'block';
+				}
+			}
+		},
+		handleMouseLeave(event) {
+			const expandedImage = document.querySelector('.project-image.expanded');
+			if (expandedImage && !expandedImage.contains(event.relatedTarget)) {
+				this.isImageExpanded = false;
+			}
 		}
 	},
 };
@@ -212,7 +229,8 @@ export default {
 .projects {
 	display: flex;
 	align-items: center;
-	margin-bottom: 50vh;
+	margin-top: 20px;
+	margin-bottom: 20%;
 }
 
 .projects img {
@@ -220,7 +238,12 @@ export default {
 	border: 1px solid var(--orange);
 	border-radius: 5%;
 	margin-left: 20vh;
-	transition: transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	opacity: 0.2;
+}
+
+.projects img:hover {
+	opacity: 1;
 }
 
 .project-image {
@@ -237,29 +260,54 @@ export default {
 	margin-left: 5%;
 }
 
+.project-image.expanded img {
+	opacity: 1;
+}
+
+.overlay-text {
+	position: absolute;
+	top: 42%;
+	left: 42%;
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+	pointer-events: none;
+}
+
+.project-image.expanded .overlay-text {
+	display: none;
+}
+
+.project-image:hover .overlay-text {
+	opacity: 0;
+}
+
 .navigation-buttons {
 	position: absolute;
-	bottom: -70%;
-	left: 35%;
+	bottom: 10px;
+	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1;
 	opacity: 0;
 	transition: opacity 0.8s ease-in-out;
 }
 
-.navigation-buttons.visible {
+.project-image.expanded .navigation-buttons {
 	opacity: 1;
 }
 
 .navigation-buttons .button {
-	font-size: 25px;
+	font-size: 16px;
 	font-family: 'Oxanium', sans-serif;
 	color: var(--white);
 	background-color: var(--light-blue);
 	border: none;
 	border-radius: 5px;
-	padding: 10px 40px;
-	margin-right: 20px;
+	padding: 8px 20px;
+	margin-right: 10px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
