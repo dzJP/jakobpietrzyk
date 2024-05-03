@@ -16,7 +16,7 @@
 			development, and web development.
 			Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
 			I thrive in environments that encourage creativity, collaboration, and continuous learning.
-			With an eagerness to learn, I'm constantly looking for oppurtunities to deepen my existing knowledge as well
+			With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as well
 			as broaden my skill set.
 		</div>
 	</div>
@@ -37,10 +37,11 @@
 		<div class="projects">
 			<div class="project-image" :class="{ 'expanded': isImageExpanded }">
 				<img :src="currentImage" alt="project-image" @click="toggleImageSize">
-				<div class="navigation-buttons" v-if="isImageExpanded">
-					<button @click="showLogin">Previous</button>
-					<button @click="showForgotPassword">Next</button>
-				</div>
+			</div>
+			<!-- Navigation buttons container outside the project image -->
+			<div class="navigation-buttons" :class="{ 'visible': isImageExpanded }">
+				<button class="button" @click="navigate('previous')">Previous</button>
+				<button class="button" @click="navigate('next')">Next</button>
 			</div>
 		</div>
 	</div>
@@ -50,21 +51,55 @@
 export default {
 	data() {
 		return {
-			loginImage: require('@/assets/login.png'),
-			forgotPasswordImage: require('@/assets/forgotPassword.png'),
-			currentImage: '',
+			images: [
+				require('@/assets/login.png'),
+				require('@/assets/forgotPassword.png'),
+				require('@/assets/receivedPassword.png'),
+				require('@/assets/homepageUser.png'),
+				require('@/assets/adminpage.png'),
+				require('@/assets/adminpageInviteUsers.png'),
+				require('@/assets/receivedInvitation.png'),
+				require('@/assets/signuppage.png'),
+				require('@/assets/adminpageCreateNews.png'),
+				require('@/assets/adminpageCreatedNews.png'),
+				require('@/assets/adminpageLatestNews.png'),
+				require('@/assets/adminpageOldestNews.png'),
+				require('@/assets/adminpageSearchNews1.png'),
+				require('@/assets/adminpageSearchNews2.png'),
+				require('@/assets/adminpageEditNews.png'),
+				require('@/assets/adminpageEditedNews.png'),
+				require('@/assets/adminpageSelectedNews.png'),
+				require('@/assets/adminpageNewsNavigate1.png'),
+				require('@/assets/adminpageNewsNavigate2.png'),
+				require('@/assets/receivedSharedNews.png'),
+				require('@/assets/adminpageEditUser.png'),
+				require('@/assets/adminpageEditUserPopup1.png'),
+				require('@/assets/adminpageEditUserPopup2.png'),
+				require('@/assets/adminpageEditedUser.png'),
+				require('@/assets/adminpageCreateProject.png'),
+				require('@/assets/adminpageEditProject.png'),
+				require('@/assets/homepageAdminRegisterHours.png'),
+				require('@/assets/profilePage.png'),
+				require('@/assets/colleaguesPage.png'),
+
+			],
+			currentImageIndex: 0,
 			isImageExpanded: false,
 		};
 	},
-	created() {
-		this.currentImage = this.loginImage;
+	computed: {
+		currentImage() {
+			return this.images[this.currentImageIndex];
+		}
 	},
 	methods: {
-		showLogin() {
-			this.currentImage = this.loginImage;
-		},
-		showForgotPassword() {
-			this.currentImage = this.forgotPasswordImage;
+		navigate(direction) {
+			if (!this.isImageExpanded) return;
+			if (direction === 'previous') {
+				this.currentImageIndex = (this.currentImageIndex - 1 + this.images.length) % this.images.length;
+			} else if (direction === 'next') {
+				this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+			}
 		},
 		toggleImageSize() {
 			this.isImageExpanded = !this.isImageExpanded;
@@ -72,7 +107,6 @@ export default {
 	},
 };
 </script>
-
 <style>
 .header-container {
 	position: relative;
@@ -82,7 +116,6 @@ export default {
 	text-align: center;
 	margin-top: 20vh;
 	margin-left: 70vh;
-
 }
 
 .header-role {
@@ -95,7 +128,6 @@ export default {
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	padding-bottom: 15px;
-
 }
 
 .profile-picture {
@@ -108,7 +140,6 @@ export default {
 	max-width: 200px;
 	border: 2px solid var(--orange);
 	border-radius: 50%;
-	/* transform: scaleX(-1); */
 }
 
 .welcome-text-container {
@@ -193,17 +224,47 @@ export default {
 }
 
 .project-image {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	transition: transform 0.5s;
+	cursor: pointer;
 }
 
 .project-image.expanded {
-	transform: scale(2);
+	transform: scale(3);
+	margin-left: 5%;
 }
 
 .navigation-buttons {
 	position: absolute;
-	bottom: 15px;
-	left: 55%;
+	bottom: -70%;
+	left: 35%;
+	transform: translateX(-50%);
 	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out;
+}
+
+.navigation-buttons.visible {
+	opacity: 1;
+}
+
+.navigation-buttons .button {
+	font-size: 25px;
+	font-family: 'Oxanium', sans-serif;
+	color: var(--white);
+	background-color: var(--light-blue);
+	border: none;
+	border-radius: 5px;
+	padding: 10px 40px;
+	margin-right: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.navigation-buttons .button:hover {
+	background-color: var(--light-blue-hover);
 }
 </style>
