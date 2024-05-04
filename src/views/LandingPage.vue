@@ -1,4 +1,5 @@
 <template>
+
 	<div class="header-container">
 		<div class="header-role">
 			Java Full Stack Developer
@@ -41,8 +42,6 @@
 				<div class="overlay-text" v-if="!isImageExpanded">
 					Intranet development
 				</div>
-
-				<!-- Move navigation buttons inside the project-image div -->
 				<div class="navigation-buttons" :class="{ 'visible': isImageExpanded }">
 					<button class="button" @click="navigate('previous')">Previous</button>
 					<button class="button" @click="navigate('next')">Next</button>
@@ -125,6 +124,10 @@ export default {
 };
 </script>
 <style>
+
+.welcome-picture {
+	height: 40px;
+}
 .header-container {
 	position: relative;
 	display: flex;
@@ -229,6 +232,7 @@ export default {
 .projects {
 	display: flex;
 	align-items: center;
+	margin-left: 10%;
 	margin-top: 20px;
 	margin-bottom: 20%;
 }
@@ -237,7 +241,6 @@ export default {
 	max-width: 400px;
 	border: 1px solid var(--orange);
 	border-radius: 5%;
-	margin-left: 20vh;
 	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	opacity: 0.2;
 }
@@ -267,7 +270,7 @@ export default {
 .overlay-text {
 	position: absolute;
 	top: 42%;
-	left: 42%;
+	left: 15%;
 	color: white;
 	font-size: 20px;
 	text-transform: uppercase;
@@ -275,6 +278,8 @@ export default {
 	opacity: 1;
 	transition: opacity 0.5s ease-in-out;
 	pointer-events: none;
+	white-space: nowrap;
+
 }
 
 .project-image.expanded .overlay-text {
