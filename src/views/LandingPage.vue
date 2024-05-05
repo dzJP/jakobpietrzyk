@@ -1,16 +1,5 @@
 <template>
-
-	<div class="header-container">
-		<div class="header-role">
-			Java Full Stack Developer
-		</div>
-		<div class="header-name">
-			Jakob Pietrzyk
-		</div>
-	</div>
-	<div class="profile-picture">
-		<img src="@/assets/jakob.jpg" alt="profile-picture">
-	</div>
+	<HeaderComponent />
 	<div class="welcome-text-container">
 		<div class="welcome-text">
 			Dedicated and highly motivated Java programmer with a strong background in Java programming, database
@@ -50,6 +39,9 @@
 				A secure and efficient internal network for streamlined communication, collaboration, and information
 				sharing.
 			</div>
+			<div class="link-to-repo-intranet">
+				<a href="https://github.com/dzJP/intranet">Repository</a>
+			</div>
 			<div class="project-video">
 				<video controls>
 					<source src="@/assets/worldwidepancakes.mp4" type="video/mp4">
@@ -59,15 +51,23 @@
 					World Wide Pancakes
 				</div>
 				<div class="project-description-worldwidepancakes" v-if="!isImageExpanded">
-					World Wide Pancakes is a web app where pancake enthusiasts can discover, share, and connect over delicious recipes.
+					World Wide Pancakes is a web app where pancake enthusiasts can discover, share, and connect over
+					delicious recipes.
 				</div>
+				<div class="link-to-repo-worldwidepancakes">
+				<a href="https://github.com/dzJP/worldwidepancakes">Repository</a>
+			</div>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import HeaderComponent from '@/components/HeaderComponent.vue';
 export default {
+	components: {
+		HeaderComponent
+	},
 	data() {
 		return {
 			images: [
@@ -139,45 +139,6 @@ export default {
 };
 </script>
 <style>
-.header-container {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	margin-top: 5%;
-	padding-bottom: 5px;
-	margin-left: 50%;
-}
-
-.header-role {
-	position: relative;
-	display: flex;
-	top: 5%;
-	font-size: 25px;
-	letter-spacing: 5px;
-
-}
-
-.header-name {
-	font-size: 60px;
-	text-transform: uppercase;
-	letter-spacing: 10px;
-	padding-bottom: 15px;
-}
-
-.profile-picture {
-	position: absolute;
-	top: 5%;
-	left: 5%;
-}
-
-.profile-picture img {
-	max-width: 200px;
-	border: 2px solid #333333;
-	border-radius: 50%;
-}
-
 .welcome-text-container {
 	width: 100%;
 	background-color: var(--dark-blue);
@@ -243,9 +204,10 @@ export default {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 10px;
-	margin-top: 50px;
+	margin-top: 40px;
 	font-size: 40px;
 }
+
 
 .projects {
 	display: flex;
@@ -256,15 +218,15 @@ export default {
 }
 
 .project-image img {
-    max-width: 400px;
-    border: 1px solid #333333;
-    border-radius: 5%;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 0.4;
+	max-width: 400px;
+	border: 1px solid #333333;
+	border-radius: 5%;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	opacity: 0.4;
 }
 
 .project-image:hover img {
-    opacity: 1;
+	opacity: 1;
 }
 
 .project-image {
@@ -272,7 +234,6 @@ export default {
 	display: flex;
 	left: 5%;
 	transition: transform 1s;
-	cursor: pointer;
 }
 
 .project-image:hover {
@@ -350,6 +311,30 @@ export default {
 	z-index: -1;
 	pointer-events: none;
 }
+.link-to-repo-worldwidepancakes {
+	left: 42% !important;
+}
+a:visited {
+	color: var(--orange);
+}
+
+.link-to-repo-intranet a,
+.link-to-repo-worldwidepancakes {
+	position: absolute;
+	bottom: -55%;
+	left: 24%;
+	transform: translate(-50%, -50%); /* center with top left and transform */
+	text-align: center;
+	text-shadow: 2px 2px 4px var(--dark-blue);
+	z-index: 3;
+	color: var(--orange);
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	
+}
 
 .project-video {
 	position: absolute;
@@ -393,5 +378,4 @@ export default {
 	pointer-events: none;
 	letter-spacing: 2px;
 }
-
 </style>
