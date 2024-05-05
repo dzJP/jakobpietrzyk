@@ -16,7 +16,7 @@
 			Dedicated and highly motivated Java programmer with a strong background in Java programming, database
 			development, and web development.
 			Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
-			I thrive in environments that encourage creativity, collaboration, and continuous learning.
+			<br>I thrive in environments that encourage creativity, collaboration, and continuous learning.
 			With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as well
 			as broaden my skill set.
 		</div>
@@ -190,17 +190,18 @@ export default {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	font-size: 20px;
+	font-size: 16px;
+	letter-spacing: 2px;
 	margin-left: auto;
 	margin-right: auto;
-	overflow-wrap: break-word;
-	max-width: 80vh;
-	padding: 10vh;
+	word-wrap: break-word;
+	width: 40%;
+	padding: 5%;
 }
 
 .skills-section-container {
 	background-color: var(--dark-blue);
-	border: 2px solid var(--blue);
+	border-bottom: 2px solid var(--blue);
 	width: 100%;
 	margin-top: 5px;
 }
@@ -213,7 +214,8 @@ export default {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 10px;
-	padding-top: 10vh;
+	padding-top: 40px;
+	margin-bottom: 30px;
 	font-size: 40px;
 }
 
@@ -227,9 +229,9 @@ export default {
 	letter-spacing: 3px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 5vh;
+	margin-bottom: 40px;
 	font-size: 18px;
-	max-width: 65vh;
+	max-width: 30%;
 	padding: 10px;
 }
 
@@ -340,6 +342,7 @@ export default {
 	margin-top: 16%;
 	left: 25%;
 	transform: translateX(-50%);
+	letter-spacing: 2px;
 	text-align: center;
 	font-size: 16px;
 	color: white;
@@ -369,7 +372,7 @@ export default {
 .project-video video:hover {
 	opacity: 1;
 	transform: scale(1.75);
-	z-index: 4;
+
 }
 
 .project-video:hover .overlay-text {
@@ -381,13 +384,14 @@ export default {
 	position: absolute;
 	text-align: center;
 	margin-top: 15px;
-	left: 40%;
-	font-size: 16px;
+	left: 42%;
+	font-size: 14px;
 	color: white;
 	transform: translateX(-50%);
-	width: 85%;
+	width: 100%;
 	z-index: -1;
 	pointer-events: none;
+	letter-spacing: 2px;
 }
 
 </style>
