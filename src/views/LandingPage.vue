@@ -36,8 +36,7 @@
 			My projects
 		</div>
 		<div class="projects">
-			<div class="project-image" :class="{ 'expanded': isImageExpanded }" @click="toggleImageSize"
-				@mouseleave="handleMouseLeave">
+			<div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave">
 				<img :src="currentImage" alt="project-image">
 				<div class="overlay-text" v-if="!isImageExpanded">
 					Intranet development
@@ -45,6 +44,22 @@
 				<div class="navigation-buttons" :class="{ 'visible': isImageExpanded }">
 					<button class="button" @click="navigate('previous')">Previous</button>
 					<button class="button" @click="navigate('next')">Next</button>
+				</div>
+			</div>
+			<div class="project-description-deltma" v-if="!isImageExpanded">
+				A secure and efficient internal network for streamlined communication, collaboration, and information
+				sharing.
+			</div>
+			<div class="project-video">
+				<video controls>
+					<source src="@/assets/worldwidepancakes.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<div class="overlay-text" v-if="!isImageExpanded">
+					World Wide Pancakes
+				</div>
+				<div class="project-description-worldwidepancakes" v-if="!isImageExpanded">
+					World Wide Pancakes is a web app where pancake enthusiasts can discover, share, and connect over delicious recipes.
 				</div>
 			</div>
 		</div>
@@ -124,23 +139,24 @@ export default {
 };
 </script>
 <style>
-
-.welcome-picture {
-	height: 40px;
-}
 .header-container {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	margin-top: 20vh;
-	margin-left: 70vh;
+	margin-top: 5%;
+	padding-bottom: 5px;
+	margin-left: 50%;
 }
 
 .header-role {
+	position: relative;
+	display: flex;
+	top: 5%;
 	font-size: 25px;
 	letter-spacing: 5px;
+
 }
 
 .header-name {
@@ -152,13 +168,13 @@ export default {
 
 .profile-picture {
 	position: absolute;
-	top: 15%;
-	left: 15%;
+	top: 5%;
+	left: 5%;
 }
 
 .profile-picture img {
 	max-width: 200px;
-	border: 2px solid var(--orange);
+	border: 2px solid #333333;
 	border-radius: 50%;
 }
 
@@ -225,7 +241,7 @@ export default {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 10px;
-	padding-top: 5vh;
+	margin-top: 50px;
 	font-size: 40px;
 }
 
@@ -233,37 +249,32 @@ export default {
 	display: flex;
 	align-items: center;
 	margin-left: 10%;
-	margin-top: 20px;
+	margin-top: 5%;
 	margin-bottom: 20%;
 }
 
 .projects img {
 	max-width: 400px;
-	border: 1px solid var(--orange);
+	border: 1px solid #333333;
 	border-radius: 5%;
 	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-	opacity: 0.2;
-}
-
-.projects img:hover {
-	opacity: 1;
+	opacity: 0.4;
 }
 
 .project-image {
 	position: relative;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: transform 0.5s;
+	left: 5%;
+	transition: transform 1s;
 	cursor: pointer;
 }
 
-.project-image.expanded {
-	transform: scale(3);
-	margin-left: 5%;
+.project-image:hover {
+	transform: scale(2);
+	z-index: 3;
 }
 
-.project-image.expanded img {
+.project-image:hover .navigation-buttons {
 	opacity: 1;
 }
 
@@ -276,18 +287,17 @@ export default {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	opacity: 1;
-	transition: opacity 0.5s ease-in-out;
 	pointer-events: none;
 	white-space: nowrap;
-
-}
-
-.project-image.expanded .overlay-text {
-	display: none;
+	transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
 .project-image:hover .overlay-text {
 	opacity: 0;
+}
+
+.project-image img:hover {
+	opacity: 1 !important;
 }
 
 .navigation-buttons {
@@ -297,7 +307,7 @@ export default {
 	transform: translateX(-50%);
 	z-index: 1;
 	opacity: 0;
-	transition: opacity 0.8s ease-in-out;
+	transition: opacity 1s ease-in-out;
 }
 
 .project-image.expanded .navigation-buttons {
@@ -305,10 +315,10 @@ export default {
 }
 
 .navigation-buttons .button {
-	font-size: 16px;
-	font-family: 'Oxanium', sans-serif;
 	color: var(--white);
 	background-color: var(--light-blue);
+	font-size: 16px;
+	font-family: 'Oxanium', sans-serif;
 	border: none;
 	border-radius: 5px;
 	padding: 8px 20px;
@@ -320,4 +330,60 @@ export default {
 .navigation-buttons .button:hover {
 	background-color: var(--light-blue-hover);
 }
+
+.project-description-deltma {
+	position: absolute;
+	margin-top: 16%;
+	left: 25%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	width: 20%;
+	z-index: -1;
+	pointer-events: none;
+}
+
+.project-video {
+	position: absolute;
+	align-items: center;
+	left: 65%;
+	right: 10%;
+}
+
+.project-video video {
+	max-width: 400px;
+	margin-top: 15px;
+	opacity: 0.1;
+	border: 1px solid #333333;
+	border-radius: 1%;
+	outline: none;
+	cursor: pointer;
+	transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.project-video video:hover {
+	opacity: 1;
+	transform: scale(1.75);
+	z-index: 4;
+}
+
+.project-video:hover .overlay-text {
+	transform: scale(1.5);
+	opacity: 0;
+}
+
+.project-description-worldwidepancakes {
+	position: absolute;
+	text-align: center;
+	margin-top: 15px;
+	left: 40%;
+	font-size: 16px;
+	color: white;
+	transform: translateX(-50%);
+	width: 85%;
+	z-index: -1;
+	pointer-events: none;
+}
+
 </style>
