@@ -223,6 +223,7 @@ export default {
 	border-radius: 5%;
 	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	opacity: 0.4;
+	margin-top: 15%;
 }
 
 .project-image:hover img {
@@ -230,9 +231,9 @@ export default {
 }
 
 .project-image {
-	position: relative;
-	display: flex;
-	left: 5%;
+	position: absolute;
+	bottom: -45%;
+	left: 15%;
 	transition: transform 1s;
 }
 
@@ -247,10 +248,11 @@ export default {
 
 .overlay-text {
 	position: absolute;
-	top: 42%;
-	left: 15%;
-	color: white;
-	font-size: 20px;
+	top: 45%;
+	left: 8%;
+	color: rgba(255, 255, 255, 0.642);
+	font-size: 25px;
+	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	opacity: 1;
@@ -300,35 +302,37 @@ export default {
 
 .project-description-deltma {
 	position: absolute;
-	margin-top: 16%;
+	bottom: -55%;
 	left: 25%;
-	transform: translateX(-50%);
+	margin-left: 15px;
+	transform: translate(-50%, -50%);
 	letter-spacing: 2px;
 	text-align: center;
 	font-size: 16px;
 	color: white;
-	width: 20%;
-	z-index: -1;
+	width: 30%;
+	z-index: -2;
 	pointer-events: none;
 }
 .link-to-repo-worldwidepancakes {
 	left: 42% !important;
 }
-a:visited {
+a:visited, a:link {
 	color: var(--orange);
+	text-decoration: none;
 }
 
 .link-to-repo-intranet a,
 .link-to-repo-worldwidepancakes {
 	position: absolute;
-	bottom: -55%;
+	bottom: -65%;
 	left: 24%;
 	transform: translate(-50%, -50%); /* center with top left and transform */
 	text-align: center;
 	text-shadow: 2px 2px 4px var(--dark-blue);
 	z-index: 3;
 	color: var(--orange);
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 600;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -338,19 +342,17 @@ a:visited {
 
 .project-video {
 	position: absolute;
-	align-items: center;
-	left: 65%;
-	right: 10%;
+	bottom: -45%;
+	right: 15%;
+	transition: transform 1s;
 }
 
 .project-video video {
 	max-width: 400px;
-	margin-top: 15px;
-	opacity: 0.1;
 	border: 1px solid #333333;
-	border-radius: 1%;
-	outline: none;
-	cursor: pointer;
+	border-radius: 5%;
+	opacity: 0.4;
+	margin-top: 15%;
 	transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
 }
 
@@ -367,15 +369,15 @@ a:visited {
 
 .project-description-worldwidepancakes {
 	position: absolute;
-	text-align: center;
-	margin-top: 15px;
-	left: 42%;
-	font-size: 14px;
-	color: white;
-	transform: translateX(-50%);
+	bottom: -35%;
+	right: -55%;
+	margin-right: 10px;
 	width: 100%;
-	z-index: -1;
-	pointer-events: none;
+	transform: translate(-50%, -50%);
 	letter-spacing: 2px;
+	font-size: 16px;
+	color: white;
+	z-index: -2;
+	pointer-events: none;
 }
 </style>
