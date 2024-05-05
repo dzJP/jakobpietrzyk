@@ -253,12 +253,16 @@ export default {
 	margin-bottom: 20%;
 }
 
-.projects img {
-	max-width: 400px;
-	border: 1px solid #333333;
-	border-radius: 5%;
-	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-	opacity: 0.4;
+.project-image img {
+    max-width: 400px;
+    border: 1px solid #333333;
+    border-radius: 5%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0.4;
+}
+
+.project-image:hover img {
+    opacity: 1;
 }
 
 .project-image {
