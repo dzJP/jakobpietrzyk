@@ -3,8 +3,7 @@
         <div class="project-section-title">My projects</div>
         <div class="projects">
             <div class="project">
-                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave"
-                    @mouseover="expandImage">
+                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave" @mouseover="expandImage">
                     <img :src="currentImage" alt="project-image">
                     <div class="overlay-text" v-if="!isImageExpanded">Intranet development</div>
                     <div class="project-description" v-if="!isImageExpanded">
@@ -12,7 +11,7 @@
                         information
                         sharing.
                     </div>
-                    <div class="navigation-buttons" :class="{ 'visible': isImageExpanded }">
+                    <div class="navigation-buttons">
                         <button class="button" @click="navigate('previous')">Previous</button>
                         <button class="button" @click="navigate('next')">Next</button>
                     </div>
@@ -35,8 +34,8 @@
                     </div>
                 </div>
                 <div class="link-to-repo">
-                        <a href="https://github.com/dzJP/worldwidepancakes">Repository</a>
-                    </div>
+                    <a href="https://github.com/dzJP/worldwidepancakes">Repository</a>
+                </div>
             </div>
         </div>
     </div>
@@ -120,6 +119,8 @@ export default {
     align-items: center;
     padding: 20px;
     min-height: 600px;
+    background-color: var(--darkest-gray-black);
+    border-top: 2px solid var(--orange);
 }
 
 .project-section-title {
@@ -150,7 +151,7 @@ export default {
 .project-image img,
 .project-video video {
     width: 400px;
-    border: 1px solid #333333;
+    border: 2px solid var(--dark-gray-black);
     border-radius: 5%;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0.4;
@@ -192,6 +193,7 @@ export default {
 }
 
 .navigation-buttons {
+    display: flex;
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -199,10 +201,10 @@ export default {
     transform: translateX(-50%);
     z-index: 1;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.project-image.expanded .navigation-buttons {
+.project-image.expanded:hover .navigation-buttons {
     opacity: 1;
 }
 
@@ -214,7 +216,7 @@ export default {
     text-align: center;
     border: none;
     border-radius: 5px;
-    height: 30px;
+    height: 50px;
     padding: 4px 20px;
     margin-right: 10px;
     cursor: pointer;

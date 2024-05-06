@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="profile-picture">
-        <img src="@/assets/jakob.jpg" alt="profile-picture">
+    <!-- <img src="@/assets/jakob.jpg" alt="profile-picture"> -->
     </div>
 </template>
 
@@ -19,8 +19,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 2%;
-    height: 150px;
+    margin-top: 15px;
+    padding-bottom: 30px;
+    min-height: 90px;
+    border-bottom: solid 5px var(--darker-gray-black)
 }
 
 .header-role {
