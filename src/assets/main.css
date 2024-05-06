@@ -1,5 +1,6 @@
 :root {
     --dark-blue: #040B24;
+    --darker-blue: #020613;
     --blue: #111C44;
     --light-blue: #2525A5;
     --light-blue-hover: #2d2dc7;
@@ -10,7 +11,6 @@
     --gray: #878787;
     --purple-variance: #9C8FEC;
     --gray-black: #161b22;
-    ;
 }
 
 #app, html, body {

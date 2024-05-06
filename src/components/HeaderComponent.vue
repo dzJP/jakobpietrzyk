@@ -19,13 +19,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 2%;
     height: 150px;
 }
 
 .header-role {
     position: absolute;
     right: -5%;
-    top: 30%;
+    top: 25%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     letter-spacing: 5px;
