@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="profile-picture">
-    <!-- <img src="@/assets/jakob.jpg" alt="profile-picture"> -->
+    <img src="@/assets/jakob.jpg" alt="profile-picture">
     </div>
 </template>
 

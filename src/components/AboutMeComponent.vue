@@ -4,7 +4,7 @@
             Dedicated and highly motivated Java programmer with a strong background in Java programming, database
             development, and web development.
             Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
-            <br>I thrive in environments that encourage creativity, collaboration, and continuous learning.
+            I thrive in environments that encourage creativity, collaboration, and continuous learning.
             With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as well
             as broaden my skill set.
         </div>
@@ -45,6 +45,7 @@
 .my-skills-container {
 	width: 100%;
 	background-color: var(--darker-gray-black);
+	padding-bottom: 5%;
 }
 
 .my-skills-title {
@@ -55,7 +56,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 10px;
-	padding-top: 40px;
+	padding-top: 5%;
 	margin-bottom: 15px;
 	font-size: 40px;
 }
