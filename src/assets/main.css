@@ -1,5 +1,6 @@
 :root {
     --dark-blue: #040B24;
+    --darker-blue: #020613;
     --blue: #111C44;
     --light-blue: #2525A5;
     --light-blue-hover: #2d2dc7;
@@ -9,6 +10,7 @@
     --black: #030B23;
     --gray: #878787;
     --purple-variance: #9C8FEC;
+    --gray-black: #161b22;
 }
 
 #app, html, body {
@@ -16,7 +18,7 @@
     margin: 0px;
 }
 
-.header-container, .welcome-text, .skills-section, .skills-title, .project-section-title, .projects {
+.header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
 }

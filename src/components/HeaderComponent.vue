@@ -19,25 +19,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 5%;
-    padding-bottom: 5px;
-    margin-left: 50%;
+    margin-top: 2%;
+    height: 150px;
 }
 
 .header-role {
-    position: relative;
-    display: flex;
-    top: 5%;
+    position: absolute;
+    right: -5%;
+    top: 25%;
+    transform: translate(-50%, -50%);
     font-size: 25px;
     letter-spacing: 5px;
 
 }
 
 .header-name {
+    position: absolute;
+    right: 5%;
+    top: 35%;
     font-size: 60px;
     text-transform: uppercase;
     letter-spacing: 10px;
-    padding-bottom: 15px;
 }
 
 .profile-picture {

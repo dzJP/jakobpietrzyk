@@ -1,0 +1,83 @@
+<template>
+    <div class="about-me-section-container">
+        <div class="about-me-section">
+            Dedicated and highly motivated Java programmer with a strong background in Java programming, database
+            development, and web development.
+            Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
+            <br>I thrive in environments that encourage creativity, collaboration, and continuous learning.
+            With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as well
+            as broaden my skill set.
+        </div>
+    </div>
+    <div class="my-skills-container">
+		<div class="my-skills-title">
+			My skills
+		</div>
+		<div class="my-skills-text">
+			Java & JavaScript | Spring Boot Framework | Spring Data/JPA | Spring MVC/REST | JWT | Mockito | JUnit | HTML
+			| HTTP | CSS | Node.js | Vue.js | React | Git |
+			Maven | Gradle | Docker | Azure | Figma | MySQL | Agile methodologies
+		</div>
+	</div>
+</template>
+
+<style>
+.about-me-section-container {
+	width: 100%;
+	background-color: var(--dark-blue);
+	border: 2px solid var(--blue);
+}
+
+.about-me-section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	word-wrap: break-word;
+	width: 40%;
+	padding: 5%;
+}
+
+
+.my-skills-container {
+	background-color: var(--dark-blue);
+	border-bottom: 2px solid var(--blue);
+	width: 100%;
+	margin-top: 5px;
+}
+
+.my-skills-title {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	padding-top: 40px;
+	margin-bottom: 30px;
+	font-size: 40px;
+}
+
+.my-skills-text {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	font-size: 18px;
+	max-width: 30%;
+	padding: 10px;
+}
+
+</style>
