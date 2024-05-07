@@ -9,7 +9,7 @@
             as broaden my skill set.
         </div>
     </div>
-    <div class="my-skills-container">
+    <div id="about" class="my-skills-container">
 		<div class="my-skills-title">
 			My skills
 		</div>

@@ -5,9 +5,9 @@
                 <span class="dropdown-icon">▼</span>
             </div>
             <ul class="dropdown-menu" :class="{ 'show': isDropdownOpen }">
-                <li @click="handleItemClick('Home')">Home</li>
-                <li @click="handleItemClick('About')">About</li>
-                <li @click="handleItemClick('Contact')">Contact</li>
+                <li><a href="#home" @click="scrollToSection">Home</a></li>
+                <li><a href="#about" @click="scrollToSection">About</a></li>
+                <li><a href="#contact" @click="scrollToSection">Contact</a></li>
                 <li><a href="#projects" @click="scrollToSection">Projects</a></li>
             </ul>
         </div>
@@ -31,7 +31,7 @@ export default {
             this.isDropdownOpen = false;
         },
         scrollToSection() {
-            const projectsSection = document.getElementById('projects');
+            const projectsSection = document.getElementById('projects', 'contact', 'home', 'about');
             if (projectsSection) {
                 projectsSection.scrollIntoView({ behavior: 'smooth' });
             }

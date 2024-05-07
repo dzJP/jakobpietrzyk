@@ -129,7 +129,7 @@ export default {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 10px;
-    margin-top: 40px;
+    margin-top: 5%;
     font-size: 40px;
 }
 
@@ -140,6 +140,7 @@ export default {
     padding: 20px;
     width: 75%;
     padding: 5%;
+    margin-bottom: 15%;
 }
 
 .project {

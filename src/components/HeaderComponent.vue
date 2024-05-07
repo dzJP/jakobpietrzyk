@@ -1,5 +1,5 @@
 <template>
-    <div class="header-container">
+    <div id="home" class="header-container">
         <div class="header-role">
             Java Full Stack Developer
         </div>
