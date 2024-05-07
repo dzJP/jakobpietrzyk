@@ -26,7 +26,6 @@
 	width: 100%;
 	background-color: var(--darker-gray-black);
 	border-bottom: solid 2px var(--dark-gray-black)
-
 }
 
 .about-me-section {
@@ -77,4 +76,13 @@
 	padding-bottom: 50px;
 }
 
+@media (max-width: 576px) {
+
+.about-me-section {
+
+	font-size: 1em;
+	width: 100%;
+	
+	}
+}
 </style>

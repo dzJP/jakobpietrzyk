@@ -33,7 +33,7 @@
     padding: 0;
 }
 
-.head-container, .header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
+.home, .head-container, .header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
 }
