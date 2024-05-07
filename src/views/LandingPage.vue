@@ -1,9 +1,11 @@
 <template>
+	<div id="home">
 	<HeadComponent />
 	<HeaderComponent />
 	<AboutMeComponent />
 	<ProjectsComponent />
 	<ContactMeComponent />
+</div>
 </template>
 
 <script>

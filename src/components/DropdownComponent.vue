@@ -1,8 +1,8 @@
 <template>
     <div class="dropdown-container">
-        <div class="dropdown" @click="toggleDropdown" @mouseleave="closeDropdown">
+        <div class="dropdown" @mouseover="openDropdown" @mouseleave="closeDropdown">
             <div class="dropdown-toggle">
-                <span class="dropdown-icon">▼</span>
+                <span class="dropdown-icon" :class="{ 'open': isDropdownOpen }">➤</span>
             </div>
             <ul class="dropdown-menu" :class="{ 'show': isDropdownOpen }">
                 <li><a href="#home" @click="scrollToSection">Home</a></li>
@@ -22,12 +22,10 @@ export default {
         };
     },
     methods: {
-        toggleDropdown() {
-            console.log('Toggle dropdown');
-            this.isDropdownOpen = !this.isDropdownOpen;
+        openDropdown() {
+            this.isDropdownOpen = true;
         },
         closeDropdown() {
-            console.log('Close dropdown');
             this.isDropdownOpen = false;
         },
         scrollToSection() {
@@ -48,56 +46,37 @@ export default {
 
 .dropdown {
     position: absolute;
-    top: 15px;
-    right: 5%;
-    cursor: pointer;
-}
-
-.dropdown-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px;
-}
-
-.dropdown-icon {
-    font-size: 35px;
-    color: var(--white);
-    transition: color 0.5s ease-in;
-    text-shadow: 1px 1px 10px #9ad7ff;
-}
-
-.dropdown-icon:hover {
-    color: var(--blue-heaven);
-    transition: color 0.3s ease-in-out;
+    top: 0px;
+    right: 10%;
+    cursor: default; /* Change cursor to default when list is hidden */
 }
 
 .dropdown-menu {
     position: absolute;
-    top: 20px;
-    right: -55px;
-    display: none;
-    background-color: rgb(17, 17, 17);
-    border: 1px solid #ccc;
-    width: 150px;
-    height: 220px;
-    font-size: 22px;
+    top: 35px;
+    left: -75px;
+    width: 200px;
+    opacity: 0;
+    padding: 0;
     align-items: center;
+    text-align: center;
     list-style-type: none;
     text-transform: uppercase;
-    text-align: center;
-    padding: 0;
+    pointer-events: none;
+    overflow:hidden;
     font-weight: 600;
-}
+    font-size: 22px;
+    transition: opacity 0.3s ease;
+    border: 2px solid var(--lightest-gray);
+    background-color: rgb(17, 17, 17);
 
-.dropdown-menu li {
-    margin: 5px;
-    padding: 10px;
 }
 
 .dropdown-menu.show {
-    display: block;
+    opacity: 1;
     color: var(--white);
+    height: auto;
+    pointer-events: auto; /* Enable pointer events when list is shown */
 }
 
 .dropdown-menu.show li {
@@ -106,9 +85,23 @@ export default {
 
 .dropdown-menu.show li:hover {
     color: var(--blue-heaven);
-    cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
+
+.dropdown-icon {
+    font-size: 3em;
+    color: var(--white);
+    transition: color 0.5s ease-in;
+    text-shadow: 1px 1px 10px #9ad7ff;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+.dropdown-icon:hover {
+    color: var(--blue-heaven);
+    transition: color 0.3s ease-in-out;
+}
+
 a,
 a:visited {
     color: inherit; /* Keeps the same color as the normal link */

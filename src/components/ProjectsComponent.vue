@@ -119,7 +119,7 @@ export default {
     align-items: center;
     min-height: 600px;
     background-color: var(--darkest-gray-black);
-    border-top: 2px solid var(--orange);
+    border-top: solid 1px var(--lightest-gray);
 }
 
 .project-section-title {

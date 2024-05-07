@@ -1,45 +1,87 @@
 <template>
-    <div id="home" class="header-container">
-        <div class="header-role">
-            Java Full Stack Developer
+    <div class="header-container">
+        <div class="header-text">
+            {{ typedText }}
+            <span class="cursor" :class="{ 'blink': showCursor }"></span>
         </div>
         <div class="header-name">
             Jakob Pietrzyk
         </div>
     </div>
     <!-- <div class="profile-picture">
-    <img src="@/assets/jakob.jpg" alt="profile-picture">
+        <img src="@/assets/jakob.jpg" alt="profile-picture">
     </div> -->
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            messages: [
+                "Java Full Stack Developer",
+                "Frontend Developer",
+                "Backend Developer"
+            ],
+            currentMessageIndex: 0,
+            typedText: "",
+            typingSpeed: 100,
+            showCursor: true,
+            typingDirection: 1, // 1 for left to right, -1 for right to left
+        };
+    },
+    mounted() {
+        this.typeText();
+    },
+    methods: {
+        typeText() {
+            const currentMessage = this.messages[this.currentMessageIndex];
+            let index = (this.typingDirection === 1) ? 0 : currentMessage.length;
+            const typingInterval = setInterval(() => {
+                if ((this.typingDirection === 1 && index <= currentMessage.length) ||
+                    (this.typingDirection === -1 && index >= 0)) {
+                    this.typedText = currentMessage.slice(0, index);
+                    index += this.typingDirection;
+                } else {
+                    clearInterval(typingInterval);
+                    setTimeout(() => {
+                        this.eraseText();
+                    }, 2000);
+                }
+            }, this.typingSpeed);
+        },
+        eraseText() {
+            let index = (this.typingDirection === 1) ? this.typedText.length : 0;
+            const erasingInterval = setInterval(() => {
+                if ((this.typingDirection === 1 && index >= 0) ||
+                    (this.typingDirection === -1 && index <= this.typedText.length)) {
+                    this.typedText = this.typedText.slice(0, index);
+                    index -= this.typingDirection;
+                } else {
+                    clearInterval(erasingInterval);
+                    this.currentMessageIndex = (this.currentMessageIndex + 1) % this.messages.length;
+                    setTimeout(() => {
+                        this.typeText();
+                    }, 2000);
+                }
+            }, this.typingSpeed);
+        },
+    },
+}
+</script>
+
 <style>
 .header-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 5%;
-    padding-bottom: 30px;
-    min-height: 200px;
-    border-bottom: solid 1px var(--light-gray);
-}
-
-.header-role {
-    position: absolute;
-    right: -5%;
-    top: 25%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-    letter-spacing: 5px;
-
+    margin-top: 15%;
+    min-height: 100px;
+    border-bottom: solid 1px var(--lightest-gray);
 }
 
 .header-name {
     position: absolute;
-    right: 5%;
-    top: 35%;
-    font-size: 60px;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 10px;
 }
@@ -54,5 +96,30 @@
     max-width: 200px;
     border: 2px solid #333333;
     border-radius: 50%;
+}
+
+.header-text {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.cursor {
+    border-right: 4px solid var(--blue-heaven);
+    height: 1.5em;
+    font-family: 'Oxanium', sans-serif;
+}
+
+.blink {
+    animation: blink-animation 1s infinite;
+
+}
+
+@keyframes blink-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 </style>
