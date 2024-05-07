@@ -1,5 +1,5 @@
 <template>
-    <div class="project-section-container">
+    <div id="projects" class="project-section-container">
         <div class="project-section-title">My projects</div>
         <div class="projects">
             <div class="project">
@@ -179,7 +179,7 @@ export default {
 }
 
 .project-image:hover .navigation-buttons {
-    opacity: 1;   
+    opacity: 1;
 }
 
 .navigation-buttons button {

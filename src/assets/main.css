@@ -2,6 +2,10 @@
     --dark-blue: #040B24;
     --darker-blue: #020613;
     --dark-green: #122912;
+
+    --light-gray: rgb(31, 36, 45);
+    --lighter-gray: rgb(25, 29, 36);
+    
     --gray-black: rgb(31, 31, 31);
     --dark-gray-black: rgb(24, 24, 24);
     --darker-gray-black: rgb(12,12,12);
@@ -10,6 +14,7 @@
     --blue: #111C44;
     --light-blue: #2525A5;
     --light-blue-hover: #2d2dc7;
+    --blue-heaven: rgb(88, 178, 255);
     --red: #df3232;
     --orange: #E69141;
     --dark-orange: #e6914110;
@@ -20,11 +25,12 @@
 }
 
 #app, html, body {
-    background-color: var(--dark-gray-black);
-    margin: 0px;
+    background-color: var(--darker-gray-black);
+    margin: 0;
+    padding: 0;
 }
 
-.header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
+.head-container, .header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
 }

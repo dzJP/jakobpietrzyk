@@ -7,9 +7,9 @@
             Jakob Pietrzyk
         </div>
     </div>
-    <div class="profile-picture">
+    <!-- <div class="profile-picture">
     <img src="@/assets/jakob.jpg" alt="profile-picture">
-    </div>
+    </div> -->
 </template>
 
 <style>
@@ -19,10 +19,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 5%;
     padding-bottom: 30px;
-    min-height: 90px;
-    border-bottom: solid 5px var(--darker-gray-black)
+    min-height: 200px;
+    border-bottom: solid 1px var(--light-gray);
 }
 
 .header-role {
