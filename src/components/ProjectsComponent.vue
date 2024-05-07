@@ -1,10 +1,9 @@
 <template>
-    <div class="project-section-container">
+    <div id="projects" class="project-section-container">
         <div class="project-section-title">My projects</div>
         <div class="projects">
             <div class="project">
-                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave"
-                    @mouseover="expandImage">
+                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave" @mouseover="expandImage">
                     <img :src="currentImage" alt="project-image">
                     <div class="overlay-text" v-if="!isImageExpanded">Intranet development</div>
                     <div class="project-description" v-if="!isImageExpanded">
@@ -12,9 +11,9 @@
                         information
                         sharing.
                     </div>
-                    <div class="navigation-buttons" :class="{ 'visible': isImageExpanded }">
-                        <button class="button" @click="navigate('previous')">Previous</button>
-                        <button class="button" @click="navigate('next')">Next</button>
+                    <div class="navigation-buttons">
+                        <button class="previous-button" @click="navigate('previous')">Previous</button>
+                        <button class="next-button" @click="navigate('next')">Next</button>
                     </div>
                 </div>
                 <div class="link-to-repo">
@@ -35,8 +34,8 @@
                     </div>
                 </div>
                 <div class="link-to-repo">
-                        <a href="https://github.com/dzJP/worldwidepancakes">Repository</a>
-                    </div>
+                    <a href="https://github.com/dzJP/worldwidepancakes">Repository</a>
+                </div>
             </div>
         </div>
     </div>
@@ -86,13 +85,6 @@ export default {
         },
     },
     methods: {
-        navigate(direction) {
-            if (direction === 'previous') {
-                this.currentImageIndex = (this.currentImageIndex - 1 + this.images.length) % this.images.length;
-            } else if (direction === 'next') {
-                this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
-            }
-        },
         toggleImageSize(event) {
             // Check if the click event originates from the image itself
             if (event.target.tagName.toLowerCase() === 'img') {
@@ -102,6 +94,13 @@ export default {
                 if (overlayText) {
                     overlayText.style.display = this.isImageExpanded ? 'none' : 'block';
                 }
+            }
+        },
+        navigate(direction) {
+            if (direction === 'previous') {
+                this.currentImageIndex = (this.currentImageIndex - 1 + this.images.length) % this.images.length;
+            } else if (direction === 'next') {
+                this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
             }
         },
         handleMouseLeave(event) {
@@ -118,8 +117,9 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
     min-height: 600px;
+    background-color: var(--darkest-gray-black);
+    border-top: solid 1px var(--lightest-gray);
 }
 
 .project-section-title {
@@ -129,7 +129,7 @@ export default {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 10px;
-    margin-top: 40px;
+    margin-top: 5%;
     font-size: 40px;
 }
 
@@ -140,6 +140,7 @@ export default {
     padding: 20px;
     width: 75%;
     padding: 5%;
+    margin-bottom: 15%;
 }
 
 .project {
@@ -150,7 +151,7 @@ export default {
 .project-image img,
 .project-video video {
     width: 400px;
-    border: 1px solid #333333;
+    border: 2px solid var(--dark-gray-black);
     border-radius: 5%;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0.4;
@@ -165,6 +166,42 @@ export default {
     opacity: 1;
     transform: scale(1.75);
 }
+
+.navigation-buttons {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    height: 5px;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project-image:hover .navigation-buttons {
+    opacity: 1;
+}
+
+.navigation-buttons button {
+    color: var(--white);
+    background-color: var(--light-blue);
+    font-size: 26px;
+    font-family: 'Oxanium', sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    padding: 4px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: var(--light-blue-hover);
+}
+
 
 .project-image:hover .overlay-text,
 .project-video:hover .overlay-text {
@@ -189,40 +226,6 @@ export default {
 
 .project-image:hover .overlay-text {
     opacity: 0;
-}
-
-.navigation-buttons {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    height: 5px;
-    transform: translateX(-50%);
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.project-image.expanded .navigation-buttons {
-    opacity: 1;
-}
-
-.navigation-buttons .button {
-    color: var(--white);
-    background-color: var(--light-blue);
-    font-size: 16px;
-    font-family: 'Oxanium', sans-serif;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    padding: 4px 20px;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-}
-
-.navigation-buttons .button:hover {
-    background-color: var(--light-blue-hover);
 }
 
 .project-description {

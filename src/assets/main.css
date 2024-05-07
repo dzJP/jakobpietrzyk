@@ -1,24 +1,39 @@
 :root {
     --dark-blue: #040B24;
     --darker-blue: #020613;
+    --dark-green: #122912;
+
+    --light-gray: rgb(31, 36, 45);
+    --lighter-gray: rgb(25, 29, 36);
+    --lightest-gray: rgb(50, 57, 70);
+    
+    --gray-black: rgb(31, 31, 31);
+    --dark-gray-black: rgb(24, 24, 24);
+    --darker-gray-black: rgb(12,12,12);
+    --darkest-gray-black: rgb(5,5,5);
+    --light-gray-black: rgb(40, 40, 40);
+
     --blue: #111C44;
     --light-blue: #2525A5;
     --light-blue-hover: #2d2dc7;
+    --blue-heaven: rgb(88, 178, 255);
+    --green-heaven:  rgb(0, 126, 31);
     --red: #df3232;
     --orange: #E69141;
+    --dark-orange: #e6914110;
     --white: #FFFFFF;
     --black: #030B23;
     --gray: #878787;
     --purple-variance: #9C8FEC;
-    --gray-black: #161b22;
 }
 
 #app, html, body {
-    background-color: var(--dark-blue);
-    margin: 0px;
+    background-color: var(--dark-gray-black);
+    margin: 0;
+    padding: 0;
 }
 
-.header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
+.head-container, .header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
 }

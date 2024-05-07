@@ -4,12 +4,12 @@
             Dedicated and highly motivated Java programmer with a strong background in Java programming, database
             development, and web development.
             Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
-            <br>I thrive in environments that encourage creativity, collaboration, and continuous learning.
+            I thrive in environments that encourage creativity, collaboration, and continuous learning.
             With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as well
             as broaden my skill set.
         </div>
     </div>
-    <div class="my-skills-container">
+    <div id="about" class="my-skills-container">
 		<div class="my-skills-title">
 			My skills
 		</div>
@@ -24,31 +24,28 @@
 <style>
 .about-me-section-container {
 	width: 100%;
-	background-color: var(--dark-blue);
-	border: 2px solid var(--blue);
+	background-color: var(--darker-gray-black);
+	border-bottom: solid 2px var(--dark-gray-black)
+
 }
 
 .about-me-section {
 	position: relative;
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
 	font-size: 16px;
 	letter-spacing: 2px;
-	margin-left: auto;
-	margin-right: auto;
-	word-wrap: break-word;
-	width: 40%;
+	width: 50%;
 	padding: 5%;
 }
 
-
 .my-skills-container {
-	background-color: var(--dark-blue);
-	border-bottom: 2px solid var(--blue);
 	width: 100%;
-	margin-top: 5px;
+	background-color: var(--darker-gray-black);
+	padding-bottom: 5%;
 }
 
 .my-skills-title {
@@ -59,12 +56,15 @@
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 10px;
-	padding-top: 40px;
-	margin-bottom: 30px;
+	padding-top: 5%;
+	margin-bottom: 15px;
 	font-size: 40px;
 }
 
 .my-skills-text {
+	color: #ffffff94;
+	margin-left: auto;
+	margin-right: auto;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -72,12 +72,9 @@
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 40px;
 	font-size: 18px;
 	max-width: 30%;
-	padding: 10px;
+	padding-bottom: 50px;
 }
 
 </style>
