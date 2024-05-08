@@ -17,9 +17,13 @@
     --light-blue: #2525A5;
     --light-blue-hover: #2d2dc7;
     --blue-heaven: rgb(88, 178, 255);
-    --green-heaven:  rgb(0, 126, 31);
+    --blue-heaven-hover: rgb(137, 200, 255);
+    --blue-sky: rgb(58, 163, 255);
+    --blue-sky-hover: rgb(88, 177, 255);
+
     --red: #df3232;
     --orange: #E69141;
+    --orange-hover: #ffac5e;
     --dark-orange: #e6914110;
     --white: #FFFFFF;
     --black: #030B23;
@@ -33,9 +37,65 @@
     padding: 0;
 }
 
-.head-container, .header-container, .about-me-section-container, .my-skills-container, .my-skills-text, .project-section-title, .projects {
+h2, h3 {
+    color: var(--white);
+    font-family: 'Oxanium', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.home, .head-container, .header-container, .project-section-title, .projects {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
 }
 
+.button {
+    font-size: 1.2em;
+    color: var(--white);
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--blue-sky);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--blue-heaven-hover);
+}
 
+.button:hover {
+    background-color: var(--blue-sky-hover);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Oxanium', sans-serif;
+}
+
+body {
+    display: block;
+}
+
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}

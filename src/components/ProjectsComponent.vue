@@ -3,7 +3,8 @@
         <div class="project-section-title">My projects</div>
         <div class="projects">
             <div class="project">
-                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave" @mouseover="expandImage">
+                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave"
+                    @mouseover="expandImage">
                     <img :src="currentImage" alt="project-image">
                     <div class="overlay-text" v-if="!isImageExpanded">Intranet development</div>
                     <div class="project-description" v-if="!isImageExpanded">
@@ -115,18 +116,20 @@ export default {
 <style>
 .project-section-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    min-height: 600px;
-    background-color: var(--darkest-gray-black);
+    flex-direction: column;
+    gap: 4rem;
+    background-color: var(--gray-black);
     border-top: solid 1px var(--lightest-gray);
 }
 
 .project-section-title {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2.6em;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-top: 5%;
@@ -151,7 +154,7 @@ export default {
 .project-image img,
 .project-video video {
     width: 400px;
-    border: 2px solid var(--dark-gray-black);
+    border: 2px solid var(--orange);
     border-radius: 5%;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0.4;
@@ -185,23 +188,23 @@ export default {
 
 .navigation-buttons button {
     color: var(--white);
-    background-color: var(--light-blue);
+    background-color: var(--orange);
     font-size: 26px;
     font-family: 'Oxanium', sans-serif;
     text-align: center;
     border: none;
     border-radius: 5px;
-    height: 50px;
+    height: 40px;
     padding: 4px 20px;
     margin-right: 10px;
     cursor: pointer;
     transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--orange);
 }
 
 .navigation-buttons button:hover {
-    background-color: var(--light-blue-hover);
+    background-color: var(--orange-hover);
 }
-
 
 .project-image:hover .overlay-text,
 .project-video:hover .overlay-text {
@@ -211,7 +214,7 @@ export default {
 
 .overlay-text {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 8%;
     color: rgba(255, 255, 255, 0.642);
     font-size: 25px;
@@ -263,5 +266,45 @@ a.visited,
 a.link {
     color: var(--orange);
     text-decoration: none;
+}
+
+@media (max-width: 1366px) {
+
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 75%;
+        padding: 5%;
+        margin-bottom: 35%;
+    }
+
+    .project {
+        margin-bottom: 60%;
+    }
+
+    .navigation-buttons button {
+    color: var(--white);
+    background-color: var(--orange);
+    font-size: 26px;
+    font-family: 'Oxanium', sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    padding: 4px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    
+    }
+
+    .project-image:hover img,
+    .project-video:hover video {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
 }
 </style>
