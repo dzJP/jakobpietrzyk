@@ -95,16 +95,13 @@ export default {
     font-weight: 700;
     margin: 2rem 2% 9rem;
     animation: fadeInFromRight 2s ease forwards;
-    font-family: 'Oxanium', sans-serif;
 }
 
 .about-content h3 {
-    font-family: 'Oxanium', sans-serif;
     color: var(--white);
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 2px;
-    animation: fadeInFromTop 2s ease forwards;
 }
 
 .about-content p {
@@ -112,7 +109,6 @@ export default {
     letter-spacing: 2px;
     margin: 2rem 0 3rem;
     color: var(--white);
-    font-family: 'Oxanium', sans-serif;
     animation: fadeInFromBottom 2s ease forwards;
 }
 
@@ -124,7 +120,6 @@ export default {
 
 span {
     color: var(--white);
-    font-family: 'Oxanium', sans-serif;
     letter-spacing: 5px;
     font-size: 1em;
 }

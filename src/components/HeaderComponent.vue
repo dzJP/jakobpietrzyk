@@ -112,7 +112,6 @@ export default {
 .cursor {
     border-right: 4px solid var(--blue-heaven);
     font-size: 1.2em;
-    font-family: 'Oxanium', sans-serif;
 }
 
 .blink {

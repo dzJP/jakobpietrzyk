@@ -1,0 +1,73 @@
+<template>
+    <section class="contact" id="contact">
+        <h2 class="heading">
+            <span>Contact</span>
+        </h2>
+
+        <div class="contact-container">
+            <div class="contact-box">
+                <div class="contact-icon1">
+                    <a href="https://www.linkedin.com/in/jakob-pietrzyk-726949105">Linkedin</a>
+                    <p>Jakob_pietrzyk@outlook.com</p>
+                    <p>0763291108</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+<style>
+.heading {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.contact {
+    border-top: solid 1px var(--lightest-gray);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.contact-container .contact-box {
+    color: var(--white);
+    flex: 1 1 30rem;
+    background: var(--light-gray);
+    padding: 6rem 4rem 4rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: .2rem solid var(--lightest-gray);
+    transition: .5s ease;
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem 10% 1rem;
+}
+
+.contact-box h3, p, a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2em;
+    letter-spacing: 5px;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px var(--orange);
+}
+
+.contact-box p {
+    margin: 50px;
+}
+
+.contact-box a:hover {
+    color: var(--orange);
+}
+
+
+</style>

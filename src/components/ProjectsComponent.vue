@@ -190,7 +190,6 @@ export default {
     color: var(--white);
     background-color: var(--orange);
     font-size: 26px;
-    font-family: 'Oxanium', sans-serif;
     text-align: center;
     border: none;
     border-radius: 5px;

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div id="contact" class="contact-container">
         <div class="contact-me-header">
             Contact me
@@ -53,7 +53,6 @@ export default {
 .contact-me-header {
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Oxanium', sans-serif;
     letter-spacing: 5px;
     font-size: 40px;
     color: var(--white);
@@ -93,7 +92,6 @@ export default {
     border-radius: 10px;
     background-color: var(--lightest-gray);
     height: 40px;
-    font-family: 'Oxanium', sans-serif;
     color: var(--white);
 }
 
@@ -110,7 +108,6 @@ export default {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    font-family: 'Oxanium', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     box-shadow: 0 0 1rem var(--light-blue-hover);
@@ -119,4 +116,4 @@ export default {
 .btn:hover {
     background-color: var(--light-blue-hover);
 }
-</style>
+</style> -->
