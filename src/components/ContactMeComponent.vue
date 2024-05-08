@@ -47,7 +47,7 @@ export default {
 .contact-container {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
-
+    border-top: solid 1px var(--lightest-gray);
 }
 
 .contact-me-header {

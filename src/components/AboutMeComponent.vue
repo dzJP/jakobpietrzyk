@@ -139,10 +139,11 @@ span {
     animation: buttonFadeIn 3s ease forwards;
 }
 
-@keyframes buttonFadeIn{
+@keyframes buttonFadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -167,6 +168,7 @@ span {
         opacity: 0;
         transform: translateX(-50%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -178,6 +180,7 @@ span {
         opacity: 0;
         transform: translateY(100%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -189,6 +192,7 @@ span {
         opacity: 0;
         transform: translateY(-100%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -200,12 +204,61 @@ span {
         opacity: 0;
         transform: translateX(50%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
+@media (max-width: 1366px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-@media (max-width: 576px) {}
+    .about-content h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 2em;
+        font-weight: 700;
+        animation: none !important;
+        font-family: 'Oxanium', sans-serif;
+    }
+
+    .about-content h3 {
+        font-family: 'Oxanium', sans-serif;
+        color: var(--white);
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin: 2rem 0 3rem;
+        color: var(--white);
+        font-family: 'Oxanium', sans-serif;
+        
+    }
+    .about-img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        
+    }
+    .about-img img {
+        width: 100%;
+        height: 100px;
+        display: block;
+        object-fit: cover;
+        object-position:left;
+        border-radius: 0;
+        animation: none !important;
+    }
+}
 </style>

@@ -3,7 +3,8 @@
         <div class="project-section-title">My projects</div>
         <div class="projects">
             <div class="project">
-                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave" @mouseover="expandImage">
+                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave"
+                    @mouseover="expandImage">
                     <img :src="currentImage" alt="project-image">
                     <div class="overlay-text" v-if="!isImageExpanded">Intranet development</div>
                     <div class="project-description" v-if="!isImageExpanded">
@@ -115,18 +116,21 @@ export default {
 <style>
 .project-section-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    min-height: 600px;
-    background-color: var(--darkest-gray-black);
+    flex-direction: column;
+    gap: 4rem;
+    background-color: var(--lighter-gray);
     border-top: solid 1px var(--lightest-gray);
 }
 
 .project-section-title {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2.6em;
+    font-weight: 700;
+    margin: 2rem 2% 9rem;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-top: 5%;
@@ -151,7 +155,7 @@ export default {
 .project-image img,
 .project-video video {
     width: 400px;
-    border: 2px solid var(--dark-gray-black);
+    border: 2px solid var(--orange);
     border-radius: 5%;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0.4;
@@ -185,7 +189,7 @@ export default {
 
 .navigation-buttons button {
     color: var(--white);
-    background-color: var(--light-blue);
+    background-color: var(--orange);
     font-size: 26px;
     font-family: 'Oxanium', sans-serif;
     text-align: center;
@@ -199,7 +203,7 @@ export default {
 }
 
 .navigation-buttons button:hover {
-    background-color: var(--light-blue-hover);
+    background-color: var(--orange-hover);
 }
 
 
@@ -263,5 +267,47 @@ a.visited,
 a.link {
     color: var(--orange);
     text-decoration: none;
+}
+
+@media (max-width: 1366px) {
+    .project-section-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding:
+    }
+
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 75%;
+        padding: 5%;
+        margin-bottom: 15%;
+    }
+
+    .project-section-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 2em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        margin-top: 25px;
+    }
+    
+    .projects {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+
+}
+
+    
+
 }
 </style>
