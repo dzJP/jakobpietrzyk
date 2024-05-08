@@ -120,7 +120,7 @@ export default {
     align-items: center;
     flex-direction: column;
     gap: 4rem;
-    background-color: var(--lighter-gray);
+    background-color: var(--gray-black);
     border-top: solid 1px var(--lightest-gray);
 }
 
@@ -130,7 +130,6 @@ export default {
     justify-content: center;
     font-size: 2.6em;
     font-weight: 700;
-    margin: 2rem 2% 9rem;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-top: 5%;
@@ -195,17 +194,17 @@ export default {
     text-align: center;
     border: none;
     border-radius: 5px;
-    height: 50px;
+    height: 40px;
     padding: 4px 20px;
     margin-right: 10px;
     cursor: pointer;
     transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--orange);
 }
 
 .navigation-buttons button:hover {
     background-color: var(--orange-hover);
 }
-
 
 .project-image:hover .overlay-text,
 .project-video:hover .overlay-text {
@@ -215,7 +214,7 @@ export default {
 
 .overlay-text {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 8%;
     color: rgba(255, 255, 255, 0.642);
     font-size: 25px;
@@ -270,13 +269,6 @@ a.link {
 }
 
 @media (max-width: 1366px) {
-    .project-section-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding:
-    }
 
     .projects {
         display: flex;
@@ -285,29 +277,34 @@ a.link {
         flex-direction: column;
         width: 75%;
         padding: 5%;
-        margin-bottom: 15%;
+        margin-bottom: 35%;
     }
 
-    .project-section-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 2em;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 10px;
-        margin-top: 25px;
+    .project {
+        margin-bottom: 60%;
     }
-    
-    .projects {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 75%;
 
-}
-
+    .navigation-buttons button {
+    color: var(--white);
+    background-color: var(--orange);
+    font-size: 26px;
+    font-family: 'Oxanium', sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    padding: 4px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
     
+    }
+
+    .project-image:hover img,
+    .project-video:hover video {
+        opacity: 1;
+        transform: scale(1.5);
+    }
 
 }
 </style>

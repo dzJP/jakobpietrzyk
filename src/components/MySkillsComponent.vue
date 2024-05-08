@@ -7,8 +7,8 @@
             <div class="skills-box">
                 <div class="skills-icon1">
                     <h3>Backend Development</h3>
-                    <p>Genom att skapa backend i webbplatser och appar, hanterar backend-utveckling data,
-                        serverlogik och säkerställer felfri funktionalitet</p>
+                    <p>I specialize in crafting robust, scalable applications with efficient code testing, ensuring optimal data management, server logic, and performance, backed by secure authentication measures.
+                    </p>
                     <a href="#contact" class="button">Contact me</a>
                 </div>
             </div>
@@ -24,7 +24,7 @@
             <div class="skills-box">
                 <div class="skills-icon3">
                     <h3>Web Development</h3>
-                    <p>Skapar funktionella och användarvänliga webbplatser och applikationer i Java & JavaScript</p>
+                    <p>Specializing in creating functional and user-friendly interfaces, websites, and applications in Java & JavaScript, ensuring seamless user experiences and efficient performance.</p>
                     <a href="#contact" class="button">Contact me</a>
                 </div>
             </div>
@@ -69,7 +69,7 @@
 }
 
 .skills-box h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     letter-spacing: 3px;
 }
 
@@ -88,4 +88,9 @@ section {
     padding: 2rem 10% 1rem;
 }
 
+@media (max-width: 1366px)  {
+    section {
+        padding: 2rem 10% 6rem;
+    }
+}
 </style>

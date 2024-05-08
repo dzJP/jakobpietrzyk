@@ -12,12 +12,9 @@
                 <span class="cursor" :class="{ 'blink': showCursor }"></span>
             </h3>
             <p>
-                Dedicated and highly motivated Java programmer with a strong background in Java programming, database
-                development, and web development.
+                I'm a dedicated and highly motivated Java programmer with a strong background in Java programming, database development, and web development.
                 Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
-                <!-- I thrive in environments that encourage creativity, collaboration, and continuous learning.
-				With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as
-				wellas broaden my skill set. -->
+				With a desire to learn, I'm always seeking for opportunities to expand my existing knowledge and skill set.
             </p>
             <a href="#contact" class="button">Contact me</a>
         </div>
@@ -29,6 +26,7 @@ export default {
     data() {
         return {
             messages: [
+                "Hi, I'm Jakob.",
                 "Java Full Stack Developer",
                 "Frontend Developer",
                 "Backend Developer"
@@ -136,7 +134,7 @@ span {
 }
 
 .button {
-    animation: buttonFadeIn 3s ease forwards;
+    animation: buttonFadeIn 5s ease forwards;
 }
 
 @keyframes buttonFadeIn {

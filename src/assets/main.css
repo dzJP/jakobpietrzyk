@@ -23,7 +23,7 @@
 
     --red: #df3232;
     --orange: #E69141;
-    --orange-hover: #f89c46;
+    --orange-hover: #ffac5e;
     --dark-orange: #e6914110;
     --white: #FFFFFF;
     --black: #030B23;
@@ -62,7 +62,8 @@ h2, h3 {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--blue-heaven-hover);
 }
 
 .button:hover {
