@@ -32,6 +32,7 @@
 }
 
 #app, html, body {
+    font-family: 'Oxanium', sans-serif;
     background-color: var(--dark-gray-black);
     margin: 0;
     padding: 0;
