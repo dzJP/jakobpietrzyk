@@ -107,4 +107,10 @@ a:visited {
     color: inherit; /* Keeps the same color as the normal link */
     text-decoration: none;
 }
+
+@media (max-width: 1366px) {
+    .dropdown-menu {
+        left: -5em;
+    }
+}
 </style>

@@ -1,88 +1,211 @@
 <template>
-    <div class="about-me-section-container">
-        <div class="about-me-section">
-            Dedicated and highly motivated Java programmer with a strong background in Java programming, database
-            development, and web development.
-            Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
-            I thrive in environments that encourage creativity, collaboration, and continuous learning.
-            With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as well
-            as broaden my skill set.
+    <section class="about" id="about">
+        <div class="about-img" alt="about-img">
+            <img src="@/assets/imgcode.jpg">
         </div>
-    </div>
-    <div id="about" class="my-skills-container">
-		<div class="my-skills-title">
-			My skills
-		</div>
-		<div class="my-skills-text">
-			Java & JavaScript | Spring Boot Framework | Spring Data/JPA | Spring MVC/REST | JWT | Mockito | JUnit | HTML
-			| HTTP | CSS | Node.js | Vue.js | React | Git |
-			Maven | Gradle | Docker | Azure | Figma | MySQL | Agile methodologies
-		</div>
-	</div>
+        <div class="about-content">
+            <h2 class="heading">
+                <span>About me</span>
+            </h2>
+            <h3>
+                {{ typedText }}
+                <span class="cursor" :class="{ 'blink': showCursor }"></span>
+            </h3>
+            <p>
+                Dedicated and highly motivated Java programmer with a strong background in Java programming, database
+                development, and web development.
+                Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
+                <!-- I thrive in environments that encourage creativity, collaboration, and continuous learning.
+				With an eagerness to learn, I'm constantly looking for opportunities to deepen my existing knowledge as
+				wellas broaden my skill set. -->
+            </p>
+            <a href="#contact" class="button">Contact me</a>
+        </div>
+    </section>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            messages: [
+                "Java Full Stack Developer",
+                "Frontend Developer",
+                "Backend Developer"
+            ],
+            currentMessageIndex: 0,
+            typedText: "",
+            typingSpeed: 100,
+            showCursor: true,
+            typingDirection: 1, // 1 for left to right, -1 for right to left
+        };
+    },
+    mounted() {
+        this.typeText();
+    },
+    methods: {
+        typeText() {
+            const currentMessage = this.messages[this.currentMessageIndex];
+            let index = (this.typingDirection === 1) ? 0 : currentMessage.length;
+            const typingInterval = setInterval(() => {
+                if ((this.typingDirection === 1 && index <= currentMessage.length) ||
+                    (this.typingDirection === -1 && index >= 0)) {
+                    this.typedText = currentMessage.slice(0, index);
+                    index += this.typingDirection;
+                } else {
+                    clearInterval(typingInterval);
+                    setTimeout(() => {
+                        this.eraseText();
+                    }, 1000);
+                }
+            }, this.typingSpeed);
+        },
+        eraseText() {
+            let index = (this.typingDirection === 1) ? this.typedText.length : 0;
+            const erasingInterval = setInterval(() => {
+                if ((this.typingDirection === 1 && index >= 0) ||
+                    (this.typingDirection === -1 && index <= this.typedText.length)) {
+                    this.typedText = this.typedText.slice(0, index);
+                    index -= this.typingDirection;
+                } else {
+                    clearInterval(erasingInterval);
+                    this.currentMessageIndex = (this.currentMessageIndex + 1) % this.messages.length;
+                    setTimeout(() => {
+                        this.typeText();
+                    }, 2000);
+                }
+            }, this.typingSpeed);
+        },
+    },
+}
+</script>
+
 <style>
-.about-me-section-container {
-	width: 100%;
-	background-color: var(--darker-gray-black);
-	border-bottom: solid 2px var(--dark-gray-black)
+.about {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
 }
 
-.about-me-section {
-	position: relative;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	margin-left: auto;
-    margin-right: auto;
-	font-size: 16px;
-	letter-spacing: 2px;
-	width: 50%;
-	padding: 5%;
+.about-content h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2.6em;
+    font-weight: 700;
+    margin: 2rem 2% 9rem;
+    animation: fadeInFromRight 2s ease forwards;
+    font-family: 'Oxanium', sans-serif;
 }
 
-.my-skills-container {
-	width: 100%;
-	background-color: var(--darker-gray-black);
-	padding-bottom: 5%;
+.about-content h3 {
+    font-family: 'Oxanium', sans-serif;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: fadeInFromTop 2s ease forwards;
 }
 
-.my-skills-title {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 10px;
-	padding-top: 5%;
-	margin-bottom: 15px;
-	font-size: 40px;
+.about-content p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 2rem 0 3rem;
+    color: var(--white);
+    font-family: 'Oxanium', sans-serif;
+    animation: fadeInFromBottom 2s ease forwards;
 }
 
-.my-skills-text {
-	color: #ffffff94;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 18px;
-	max-width: 30%;
-	padding-bottom: 50px;
+.about-img img {
+    max-width: 600px;
+    border-radius: 10%;
+    animation: fadeInFromLeft 2s ease forwards;
 }
 
-@media (max-width: 576px) {
-
-.about-me-section {
-
-	font-size: 1em;
-	width: 100%;
-	
-	}
+span {
+    color: var(--white);
+    font-family: 'Oxanium', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1em;
 }
+
+.blink {
+    animation: blink-animation 1s infinite;
+}
+
+.button {
+    animation: buttonFadeIn 3s ease forwards;
+}
+
+@keyframes buttonFadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 576px) {}
 </style>

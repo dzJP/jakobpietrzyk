@@ -95,6 +95,7 @@ export default {
     font-size: 1.5em;
     letter-spacing: 2px;
     margin-left: 5px;
+    color: var(--white);
 }
 
 .profile-picture {
@@ -110,7 +111,7 @@ export default {
 
 .cursor {
     border-right: 4px solid var(--blue-heaven);
-    height: 1.5em;
+    font-size: 1.2em;
     font-family: 'Oxanium', sans-serif;
 }
 
@@ -152,6 +153,7 @@ export default {
         flex-direction: column;
         align-items: center;
         gap: 100px;
+        
     }
     .header-name {
         font-size: 2.5em;
@@ -173,5 +175,8 @@ export default {
         border-radius: 10%;
     }
     
+    .home, .header-name, .header-text {
+        font-family: 'Oxanium' sans-serif;
+    }
 }
 </style>
