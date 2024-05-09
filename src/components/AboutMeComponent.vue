@@ -251,15 +251,8 @@ span {
 }
 @media (max-width: 768px) {
     
-    .about-content span {
-        font-size: 1em !important;
-    }
-
-    .about {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .about.about {
+        width: 100vh;
     }
 
     .about-content {

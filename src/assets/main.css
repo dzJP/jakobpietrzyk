@@ -6,11 +6,11 @@
     --light-gray: rgb(31, 36, 45);
     --lighter-gray: rgb(25, 29, 36);
     --lightest-gray: rgb(50, 57, 70);
-    
+
     --gray-black: rgb(31, 31, 31);
     --dark-gray-black: rgb(24, 24, 24);
-    --darker-gray-black: rgb(12,12,12);
-    --darkest-gray-black: rgb(5,5,5);
+    --darker-gray-black: rgb(12, 12, 12);
+    --darkest-gray-black: rgb(5, 5, 5);
     --light-gray-black: rgb(40, 40, 40);
 
     --blue: #111C44;
@@ -31,20 +31,33 @@
     --purple-variance: #9C8FEC;
 }
 
-#app, html, body {
+#app,
+html,
+body {
     background-color: var(--dark-gray-black);
     margin: 0;
     padding: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
     text-transform: uppercase;
     font-style: normal;
 }
 
-.home, .head-container, .header-container, .project-section-title, .projects {
+.home,
+.head-container,
+.head-portfolio-text,
+.about,
+.skills,
+.project-section-container,
+.navigation-buttons button,
+.overlay-text,
+.contact,
+.contact-container,
+a {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
 }
@@ -58,7 +71,6 @@ h2, h3 {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
-    color: var(--white);
     background-color: var(--blue-sky);
     padding: 10px 20px;
     border-radius: 5px;
@@ -90,6 +102,7 @@ section {
     display: block;
     unicode-bidi: isolate;
 }
+
 h2 {
     display: block;
     font-size: 1.5em;
@@ -99,4 +112,9 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
+}
+
+@font-face {
+    font-family: 'Oxanium';
+    src: url('./Oxanium-Regular.ttf') format('woff2');
 }
