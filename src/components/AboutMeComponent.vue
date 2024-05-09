@@ -249,6 +249,51 @@ span {
         display: inline-block;
     }
 }
+@media (max-width: 768px) {
+    
+    .about-content span {
+        font-size: 1em !important;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        animation: none !important;
+    }
+
+    .about-content h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: none;
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin: 2rem 0 3rem;
+        
+    }
+    .about-img {
+        display: none;
+    }
+
+    .button {
+        display: inline-block;
+    }
+}
     /* .about-img img {
         width: 100%;
         height: 200px;

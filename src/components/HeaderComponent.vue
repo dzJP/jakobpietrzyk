@@ -173,4 +173,31 @@ export default {
         border-radius: 10%;
     }
 }
+@media (max-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+        
+    }
+    .header-name {
+        font-size: 2em;
+        white-space: nowrap;
+        letter-spacing: 10px;
+    }
+
+    .header-text {
+        font-size: 1em;
+        letter-spacing: 4px;
+        white-space: nowrap;
+    }
+    .profile-picture {
+        margin-left: -5%;
+    }
+    .profile-img {
+        max-width: 200px;
+        border-radius: 10%;
+    }
+}
 </style>

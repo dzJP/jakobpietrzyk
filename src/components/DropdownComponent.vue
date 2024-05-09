@@ -140,4 +140,36 @@ a:visited {
 
 
 }
+@media (max-width: 768px) {
+
+.dropdown {
+    right: 15%;
+    
+}
+.dropdown-icon {
+    font-size: 3em !important;
+    color: var(--white);
+    transition: color 0.5s ease-in;
+    text-shadow: 1px 1px 10px #9ad7ff;
+    display: inline-block;
+    transform: rotate(90deg);
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    top: 85% !important;
+    left: 35% !important;
+    transform: translateX(-50%);
+    font-size: 1em;
+    padding: 1rem;
+}
+.dropdown-menu.show li:hover {
+    color: var(--blue-heaven);
+    transition: color 0.3s ease-in-out;
+}
+.dropdown-menu li {
+    margin-bottom: 15px;
+}
+
+
+}
 </style>

@@ -306,4 +306,43 @@ a.link {
     }
 
 }
+@media (max-width: 768px) {
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    padding: 5%;
+    margin-bottom: 35%;
+}
+
+.project {
+    margin-bottom: 60%;
+}
+
+.navigation-buttons button {
+color: var(--white);
+background-color: var(--orange);
+font-size: 26px;
+font-family: 'Oxanium', sans-serif;
+text-align: center;
+border: none;
+border-radius: 5px;
+height: 40px;
+padding: 4px 20px;
+margin-right: 10px;
+cursor: pointer;
+transition: background-color 0.5s ease;
+
+}
+
+.project-image:hover img,
+.project-video:hover video {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+}
 </style>
