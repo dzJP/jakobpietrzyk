@@ -1,17 +1,16 @@
 :root {
     --dark-blue: #040B24;
     --darker-blue: #020613;
-
     --dark-green: #122912;
-    --green: #007c00;
+
     --light-gray: rgb(31, 36, 45);
     --lighter-gray: rgb(25, 29, 36);
     --lightest-gray: rgb(50, 57, 70);
-
+    
     --gray-black: rgb(31, 31, 31);
     --dark-gray-black: rgb(24, 24, 24);
-    --darker-gray-black: rgb(12, 12, 12);
-    --darkest-gray-black: rgb(5, 5, 5);
+    --darker-gray-black: rgb(12,12,12);
+    --darkest-gray-black: rgb(5,5,5);
     --light-gray-black: rgb(40, 40, 40);
 
     --blue: #111C44;
@@ -21,7 +20,6 @@
     --blue-heaven-hover: rgb(137, 200, 255);
     --blue-sky: rgb(58, 163, 255);
     --blue-sky-hover: rgb(88, 177, 255);
-
 
     --red: #df3232;
     --orange: #E69141;
@@ -33,32 +31,20 @@
     --purple-variance: #9C8FEC;
 }
 
-#app,
-html,
-body {
+#app, html, body {
     background-color: var(--dark-gray-black);
     margin: 0;
     padding: 0;
 }
 
-h2,
-h3 {
+h2, h3 {
     color: var(--white);
+    font-family: 'Oxanium', sans-serif;
     text-transform: uppercase;
     font-style: normal;
 }
 
-.home,
-.head-container,
-.head-portfolio-text,
-.about,
-.skills,
-.project-section-container,
-.navigation-buttons button,
-.overlay-text,
-.contact,
-.contact-container,
-a {
+.home, .head-container, .header-container, .project-section-title, .projects {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
 }
@@ -66,18 +52,19 @@ a {
 .button {
     display: inline-block;
     font-size: 1.2em;
+    font-family: 'Oxanium', sans-serif;
     font-weight: 600;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
     text-align: center;
-    padding: 1rem 2.8rem;
-    border-radius: 5px;
-    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
     color: var(--white);
     background-color: var(--blue-sky);
-    box-shadow: 0 0 1rem var(--blue-heaven-hover);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
     transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--blue-heaven-hover);
 }
 
 .button:hover {
@@ -92,6 +79,7 @@ a {
     border: none;
     outline: none;
     scroll-behavior: smooth;
+    font-family: 'Oxanium', sans-serif;
 }
 
 body {
@@ -102,7 +90,6 @@ section {
     display: block;
     unicode-bidi: isolate;
 }
-
 h2 {
     display: block;
     font-size: 1.5em;
@@ -112,9 +99,4 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
-}
-
-@font-face {
-    font-family: 'Oxanium';
-    src: url('./Oxanium-Regular.ttf') format('woff2');
 }

@@ -51,9 +51,8 @@ section {
     padding: 2rem 10% 1rem;
 }
 
-.contact-box h3,
-p,
-a {
+.contact-box h3, .contact-box p, .contact-box a {
+    color: var(--white);
     display: flex;
     flex-direction: row;
     justify-content: center;

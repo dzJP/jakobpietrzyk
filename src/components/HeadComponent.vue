@@ -32,9 +32,8 @@ export default {
 }
 
 .head-portfolio-text {
-    position: absolute;
-    top: 0%;
-    left: 5%;
+    display: flex;
+    justify-content: flex-end;
     margin: 20px 20px 5px;
     font-weight: 600;
     font-size: 26px;
