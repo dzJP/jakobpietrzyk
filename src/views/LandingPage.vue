@@ -6,8 +6,7 @@
 		<AboutMeComponent />
 		<MySkillsComponent />
 		<ProjectsComponent />
-		<ContactMeComponent />
-
+		<ContactComponent />
 </template>
 
 <script>
@@ -16,7 +15,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue';
 import AboutMeComponent from '@/components/AboutMeComponent.vue';
 import MySkillsComponent from '@/components/MySkillsComponent.vue';
 import ProjectsComponent from '@/components/ProjectsComponent.vue';
-import ContactMeComponent from '@/components/ContactMeComponent.vue';
+import ContactComponent from '@/components/ContactComponent.vue';
 
 export default {
 	components: {
@@ -25,7 +24,7 @@ export default {
 		AboutMeComponent,
 		MySkillsComponent,
 		ProjectsComponent,
-		ContactMeComponent,
+		ContactComponent,
 	},
 	mounted() {
         const fragment = window.location.hash;
