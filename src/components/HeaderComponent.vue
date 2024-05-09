@@ -81,7 +81,7 @@ export default {
 }
 
 .header-content {
-    position: relative;
+    position: absolute;
     text-align: center;
 }
 
@@ -199,15 +199,15 @@ export default {
         border-radius: 10%;
     }
 } */
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
     .header-name {
         position: absolute;
         top: 28%;
         left: 10px;
         translate: transform(-50%, -50%);
-        font-size: 1.3em;
-        letter-spacing: 8px;
+        font-size: 1.2em;
         font-weight: 700;
+        line-height: 5;
     }
     .header-text {
         position: absolute;
@@ -224,7 +224,40 @@ export default {
         translate: transform(-50%, -50%);
     }
     .profile-img {
-        max-width: 9em;
+        max-width: 10em;
+
+    }
+} */
+@media (max-width: 360px) {
+    .home {
+    }
+    .header-name {
+        position: absolute;
+        top: 40%;
+        left: 0.5em;
+        translate: transform(-50%, -50%);
+        font-size: 1.8em;
+        letter-spacing: 8px;
+        font-weight: 400;
+    }
+    .header-text {
+        position: absolute;
+        top: 35%;
+        left: 13px;
+        font-size: 1.1em;
+        translate: transform(-50%, -50%);
+        font-weight: 400;
+        letter-spacing: 5px;
+        line-height: 1.2;
+    }
+    .profile-picture {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        translate: transform(-50%, -50%);
+    }
+    .profile-img {
+        max-width: 10em;
 
     }
 }

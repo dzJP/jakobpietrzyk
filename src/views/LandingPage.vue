@@ -1,5 +1,7 @@
 <template>
+	<div id="home">
 		<HeadComponent />
+    </div>
 		<HeaderComponent />
 		<AboutMeComponent />
 		<MySkillsComponent />
