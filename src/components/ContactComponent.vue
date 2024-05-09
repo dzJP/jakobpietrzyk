@@ -51,7 +51,9 @@ section {
     padding: 2rem 10% 1rem;
 }
 
-.contact-box h3, p, a{
+.contact-box h3,
+p,
+a {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -69,5 +71,28 @@ section {
     color: var(--orange);
 }
 
+@media (max-width: 1366px) {
+    .contact-container .contact-box {
+        color: var(--white);
+        flex: 1 1 30rem;
+        background: var(--light-gray);
+        padding: 3rem 2rem 2rem;
+        border-radius: 0.1rem;
+        text-align: center;
+        border: .2rem solid var(--lightest-gray);
+        transition: .5s ease;
+    }
 
+    .contact-box h3,
+    p,
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 1.5em;
+        letter-spacing: 5px;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px var(--orange);
+    }
+}
 </style>

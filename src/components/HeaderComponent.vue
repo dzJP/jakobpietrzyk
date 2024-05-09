@@ -155,13 +155,13 @@ export default {
         
     }
     .header-name {
-        font-size: 2.5em;
+        font-size: 2em;
         white-space: nowrap;
         letter-spacing: 10px;
     }
 
     .header-text {
-        font-size: 1.25em;
+        font-size: 1em;
         letter-spacing: 4px;
         white-space: nowrap;
     }
@@ -169,13 +169,8 @@ export default {
         margin-left: -5%;
     }
     .profile-img {
-        margin: auto;
         max-width: 200px;
         border-radius: 10%;
-    }
-    
-    .home, .header-name, .header-text {
-        font-family: 'Oxanium' sans-serif;
     }
 }
 </style>

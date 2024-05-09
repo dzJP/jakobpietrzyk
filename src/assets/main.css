@@ -64,19 +64,20 @@ a {
 }
 
 .button {
+    display: inline-block;
     font-size: 1.2em;
-    color: var(--white);
     font-weight: 600;
-    text-decoration: none;
     letter-spacing: 2px;
+    text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    background-color: var(--blue-sky);
-    padding: 10px 20px;
+    padding: 1rem 2.8rem;
     border-radius: 5px;
     border: none;
-    transition: background-color 0.5s ease;
+    color: var(--white);
+    background-color: var(--blue-sky);
     box-shadow: 0 0 1rem var(--blue-heaven-hover);
+    transition: background-color 0.5s ease;
 }
 
 .button:hover {
