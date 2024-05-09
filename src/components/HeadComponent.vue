@@ -1,10 +1,10 @@
 <template>
-    <div class="head-container">
+    <header class="head-container">
         <div class="head-portfolio-text">
             Portfolio
         </div>
-        <DropdownComponent />
-    </div>
+            <DropdownComponent />
+    </header>
 
 </template>
 
@@ -25,7 +25,7 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--light-gray);
+    background-color: var(--lighter-gray);
     height: 70px;
     border-bottom: 2px solid var(--lighter-gray);
     z-index: 1000;

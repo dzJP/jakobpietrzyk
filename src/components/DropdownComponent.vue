@@ -172,12 +172,40 @@ a:visited {
         text-shadow: 1px 1px 5px #9ad7ff;
         transform: rotate(90deg);
         transition: color 0.5s ease-in;
-        background-color: blueviolet;
     }
     .dropdown-menu {
         position: absolute;
         top: 0rem;
         left: 6rem;
+        width: 200px;
+        opacity: 0;
+        padding: 0;
+        font-weight: 700;
+        font-size: 1rem;
+        border: 2px solid var(--lightest-gray);
+        background-color: rgb(17, 17, 17);
+        list-style-type: none;
+        pointer-events: none;
+        overflow: hidden;
+        transition: opacity 0.3s ease;
+    }
+}
+@media (max-width: 320px) {
+    .dropdown-icon {
+        position: absolute;
+        top: -4.5rem;
+        left: 1rem;
+        display: inline-block;
+        font-size: 5em !important;
+        text-shadow: 1px 1px 5px #9ad7ff;
+        transform: rotate(90deg);
+        transition: color 0.5s ease-in;
+    
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 1rem;
         width: 200px;
         opacity: 0;
         padding: 0;

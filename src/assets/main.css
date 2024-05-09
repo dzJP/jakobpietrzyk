@@ -31,16 +31,14 @@
     --purple-variance: #9C8FEC;
 }
 
-#app,
-html,
-body {
+#app,html,body {
     background-color: var(--dark-gray-black);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-h2,
-h3 {
+h2,h3 {
     color: var(--white);
     font-family: 'Oxanium', sans-serif;
     text-transform: uppercase;
@@ -98,10 +96,10 @@ body {
     display: block;
 }
 
-section {
+/* section {
     display: block;
     unicode-bidi: isolate;
-}
+} */
 
 h2 {
     display: block;

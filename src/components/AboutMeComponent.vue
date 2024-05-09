@@ -250,10 +250,6 @@ span {
     }
 }
 @media (max-width: 768px) {
-    
-    .about.about {
-        width: 100vh;
-    }
 
     .about-content {
         text-align: center;

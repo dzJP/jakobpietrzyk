@@ -51,7 +51,9 @@ section {
     padding: 2rem 10% 1rem;
 }
 
-.contact-box h3, .contact-box p, .contact-box a {
+.contact-box h3,
+.contact-box p,
+.contact-box a {
     color: var(--white);
     display: flex;
     flex-direction: row;
@@ -94,6 +96,7 @@ section {
         text-shadow: 1px 1px 2px var(--orange);
     }
 }
+
 @media (max-width: 768px) {
     .contact-container .contact-box {
         color: var(--white);
@@ -117,5 +120,30 @@ section {
         font-weight: 400;
         text-shadow: 1px 1px 2px var(--orange);
     }
+}
+
+@media (max-width: 360px) {
+    .heading {
+        text-align: center;
+        font-size: 2rem !important;
+    }
+
+    .contact {
+        border-top: solid 1px var(--lightest-gray);
+    }
+
+    .contact-box h3,
+    .contact-box p,
+    .contact-box a {
+        color: var(--white);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 2em;
+        letter-spacing: 5px;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px var(--orange);
+    }
+
 }
 </style>

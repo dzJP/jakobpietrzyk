@@ -173,13 +173,12 @@ export default {
         border-radius: 10%;
     }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .home {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 100px;
-        
     }
     .header-name {
         font-size: 2em;
@@ -198,6 +197,35 @@ export default {
     .profile-img {
         max-width: 200px;
         border-radius: 10%;
+    }
+} */
+@media (max-width: 320px) {
+    .header-name {
+        position: absolute;
+        top: 28%;
+        left: 10px;
+        translate: transform(-50%, -50%);
+        font-size: 1.3em;
+        letter-spacing: 8px;
+        font-weight: 700;
+    }
+    .header-text {
+        position: absolute;
+        top: 25%;
+        left: 7px;
+        font-size: 0.9em;
+        translate: transform(-50%, -50%);
+    
+    }
+    .profile-picture {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        translate: transform(-50%, -50%);
+    }
+    .profile-img {
+        max-width: 9em;
+
     }
 }
 </style>
