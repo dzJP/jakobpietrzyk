@@ -125,22 +125,19 @@ section {
 @media (max-width: 360px) {
     .heading {
         text-align: center;
-        font-size: 2rem !important;
+        font-size: 2em;
+        margin-top: 7em !important;
     }
-
     .contact h2.heading {
-        margin-top: 2.5em;
-        padding-bottom: 0.5em;
+        padding-bottom: 5em !important;
     }
-
     .contact {
         border-top: solid 1px var(--lightest-gray);
     }
 
-    .contact-box h3,
-    .contact-box p,
-    .contact-box a {
-        font-size: 1em;
+    .contact-box p {
+        margin-right: 35px;
+        font-size: 1em !important;
     }
 }
 @media (max-width: 414px) {
@@ -148,8 +145,8 @@ section {
         font-size: 1.2em;
     }
     .contact h2.heading {
-        margin-top: 2em;
-        padding-bottom: 1em;
+        margin-top: 2.5em !important;
+        padding-bottom: 1.5em !important;
     }
 }
 </style>

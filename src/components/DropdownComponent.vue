@@ -130,7 +130,7 @@ a:visited {
         font-size: 5em;
         position: absolute;
         left: 25px;
-        bottom: -15px;
+        bottom: -10px;
     }
 }
 @media (max-width: 414px) {

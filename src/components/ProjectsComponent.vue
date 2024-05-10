@@ -354,7 +354,7 @@ a.link {
         align-items: center;
         flex-direction: column;
         min-width: 100vh;
-        padding: 5em;
+        padding: 1em;
         margin-bottom: 35%;
     }
 
@@ -367,7 +367,7 @@ a.link {
         font-weight: 700;
         font-size: 2em;
         letter-spacing: 5px;
-        margin-top: 35%;
+        margin-top: 4em !important;
     }
 
     .project-image:hover img,
@@ -463,19 +463,17 @@ a.link {
     .projects {
         display: flex;
         width: 100%;
-        margin-top: 5em;
-        gap: 15em;
     }
 
     .project-section-title {
-        margin-top: 35%;
+        margin-top: 3em;
         font-size: 2em;
     }
 
     .project-description {
         position: absolute;
         left: -10px;
-        top: 12.5em;
+        top: 9em;
         width: 100%;
         margin: 10px 10px;
         letter-spacing: 2px;
@@ -488,10 +486,10 @@ a.link {
 
     .link-to-repo a {
         position: absolute;
-        top: 12em;
+        top: 10em;
         left: 50%;
         height: auto;
-        margin-top: 20px;
+        margin-top: 25px;
         font-size: 2em;
         letter-spacing: 2px;
         color: var(--orange);
