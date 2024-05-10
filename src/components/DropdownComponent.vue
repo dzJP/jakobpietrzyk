@@ -127,11 +127,20 @@ a:visited {
 
 @media (max-width: 360px) {
     .dropdown-icon {
-        font-size: 5em !important;
+        font-size: 5em;
         position: absolute;
         left: 25px;
-        bottom: -30px;
+        bottom: -15px;
     }
 }
+@media (max-width: 414px) {
+    span.dropdown-icon {
+        font-size: 4em !important;
+        position: absolute;
+        left: 0.5em;
+        top: -1.07em;
+    }
+}
+
 
 </style>

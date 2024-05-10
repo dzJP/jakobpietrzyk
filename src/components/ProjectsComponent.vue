@@ -457,4 +457,50 @@ a.link {
     }
 
 }
+
+@media (max-width: 414px) {
+
+    .projects {
+        display: flex;
+        width: 100%;
+        margin-top: 5em;
+        gap: 15em;
+    }
+
+    .project-section-title {
+        margin-top: 35%;
+        font-size: 2em;
+    }
+
+    .project-description {
+        position: absolute;
+        left: -10px;
+        top: 12.5em;
+        width: 100%;
+        margin: 10px 10px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: white;
+        z-index: -2;
+        pointer-events: none;
+        font-size: 1.2em !important;
+    }
+
+    .link-to-repo a {
+        position: absolute;
+        top: 12em;
+        left: 50%;
+        height: auto;
+        margin-top: 20px;
+        font-size: 2em;
+        letter-spacing: 2px;
+        color: var(--orange);
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-shadow: 2px 2px 4px var(--dark-blue);
+        z-index: 2;
+    }
+
+}
 </style>

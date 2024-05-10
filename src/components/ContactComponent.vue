@@ -142,6 +142,14 @@ section {
     .contact-box a {
         font-size: 1em;
     }
-
+}
+@media (max-width: 414px) {
+    .contact-box p {
+        font-size: 1.2em;
+    }
+    .contact h2.heading {
+        margin-top: 2em;
+        padding-bottom: 1em;
+    }
 }
 </style>
