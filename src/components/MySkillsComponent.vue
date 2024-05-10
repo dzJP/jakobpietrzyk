@@ -48,22 +48,24 @@
 .skills-container {
     background-color: var(--dark-gray);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
-    flex-wrap: wrap;
 }
 
 .skills-container .skills-box {
     color: var(--white);
     flex: 1 1 30rem;
     background: var(--light-gray);
-    padding: 1rem 2rem 4rem;
+    padding: 2rem 0.2rem 3rem;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--lightest-gray);
     transition: .5s ease;
+    overflow: hidden;
+
 }
 
 .skills-box:hover {
@@ -91,39 +93,31 @@ section {
     padding: 2rem 10% 1rem;
 }
 
-@media (max-width: 1366px) {
-    section {
-        padding: 2rem 10% 6rem !important;
+@media (max-width: 360px) {
+    .heading {
+        text-align: center;
+        font-size: 4.5rem;
     }
 
     .skills-box {
-        padding: 5px 1% 2rem !important;
-    }
-
-    .heading {
-
-        margin-bottom: 15%;
+        padding: 0 !important;
     }
 
     span {
-        font-size: 0.5em !important;
+        font-size: 1em !important;
         letter-spacing: 10px;
         font-weight: 700;
         text-shadow: 1px 1px 2px color #ffffff;
     }
 
-    .skills-box h3,
-    .skills-box p {
-        margin: 25px;
+    .skills-box a.button {
+        margin: 35px 15px;
         
     }
-    .skills-box p {
-        font-size: 0.9em;
-    }
 
-    .button {
+    .skills-box p {
         font-size: 1em;
-        letter-spacing: 5px !important;
+        letter-spacing: 2px;
     }
 
 }

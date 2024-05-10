@@ -1,10 +1,10 @@
 <template>
-    <div class="head-container">
-        <div class="head-portfolio-text">
+    <header class="head-container">
+        <div id="home" class="head-portfolio-text">
             Portfolio
         </div>
-        <DropdownComponent />
-    </div>
+            <DropdownComponent />
+    </header>
 
 </template>
 
@@ -32,13 +32,19 @@ export default {
 }
 
 .head-portfolio-text {
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    margin: 20px 20px 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 35px 10px;
     font-weight: 600;
-    font-size: 26px;
-    letter-spacing: 5px;
+    font-size: 2em;
+    letter-spacing: 6px;
     text-transform: uppercase;
+}
+
+@media (max-width: 360px) {
+    
+    .head-container {
+        border-bottom: 2px solid var(--lighter-gray) !important;
+    }
 }
 </style>

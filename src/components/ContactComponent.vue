@@ -8,8 +8,8 @@
             <div class="contact-box">
                 <div class="contact-icon1">
                     <a href="https://www.linkedin.com/in/jakob-pietrzyk-726949105">Linkedin</a>
-                    <p>Jakob_pietrzyk@outlook.com</p>
                     <p>0763291108</p>
+                    <p>Jakob_pietrzyk@outlook.com</p>
                 </div>
             </div>
         </div>
@@ -52,8 +52,9 @@ section {
 }
 
 .contact-box h3,
-p,
-a {
+.contact-box p,
+.contact-box a {
+    color: var(--white);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -93,6 +94,59 @@ a {
         letter-spacing: 5px;
         font-weight: 400;
         text-shadow: 1px 1px 2px var(--orange);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container .contact-box {
+        color: var(--white);
+        flex: 1 1 30rem;
+        background: var(--light-gray);
+        padding: 3rem 2rem 2rem;
+        border-radius: 0.1rem;
+        text-align: center;
+        border: .2rem solid var(--lightest-gray);
+        transition: .5s ease;
+    }
+
+    .contact-box h3,
+    p,
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 1.5em;
+        letter-spacing: 5px;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px var(--orange);
+    }
+}
+
+@media (max-width: 360px) {
+    .heading {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 7em !important;
+    }
+    .contact h2.heading {
+        padding-bottom: 5em !important;
+    }
+    .contact {
+        border-top: solid 1px var(--lightest-gray);
+    }
+
+    .contact-box p {
+        margin-right: 35px;
+        font-size: 1em !important;
+    }
+}
+@media (max-width: 414px) {
+    .contact-box p {
+        font-size: 1.2em;
+    }
+    .contact h2.heading {
+        margin-top: 2.5em !important;
+        padding-bottom: 1.5em !important;
     }
 }
 </style>

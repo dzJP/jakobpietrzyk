@@ -1,4 +1,4 @@
-# jakobpietrzyk
+# My portfolio
 
 ## Project setup
 ```

@@ -1,9 +1,8 @@
 :root {
     --dark-blue: #040B24;
     --darker-blue: #020613;
-
     --dark-green: #122912;
-    --green: #007c00;
+
     --light-gray: rgb(31, 36, 45);
     --lighter-gray: rgb(25, 29, 36);
     --lightest-gray: rgb(50, 57, 70);
@@ -22,7 +21,6 @@
     --blue-sky: rgb(58, 163, 255);
     --blue-sky-hover: rgb(88, 177, 255);
 
-
     --red: #df3232;
     --orange: #E69141;
     --orange-hover: #ffac5e;
@@ -33,17 +31,16 @@
     --purple-variance: #9C8FEC;
 }
 
-#app,
-html,
-body {
+#app,html,body {
     background-color: var(--dark-gray-black);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
-h2,
-h3 {
+h2,h3 {
     color: var(--white);
+    font-family: 'Oxanium', sans-serif;
     text-transform: uppercase;
     font-style: normal;
 }
@@ -66,18 +63,18 @@ a {
 .button {
     display: inline-block;
     font-size: 1.2em;
+    font-family: 'Oxanium', sans-serif;
     font-weight: 600;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
     text-align: center;
-    padding: 1rem 2.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    background-color: var(--blue-sky);
+    padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    color: var(--white);
-    background-color: var(--blue-sky);
-    box-shadow: 0 0 1rem var(--blue-heaven-hover);
     transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--blue-heaven-hover);
 }
 
 .button:hover {
@@ -92,16 +89,17 @@ a {
     border: none;
     outline: none;
     scroll-behavior: smooth;
+    font-family: 'Oxanium', sans-serif;
 }
 
 body {
     display: block;
 }
 
-section {
+/* section {
     display: block;
     unicode-bidi: isolate;
-}
+} */
 
 h2 {
     display: block;

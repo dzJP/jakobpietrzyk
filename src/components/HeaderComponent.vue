@@ -81,7 +81,7 @@ export default {
 }
 
 .header-content {
-    position: relative;
+    position: absolute;
     text-align: center;
 }
 
@@ -171,6 +171,94 @@ export default {
     .profile-img {
         max-width: 200px;
         border-radius: 10%;
+    }
+}
+/* @media (max-width: 768px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+    .header-name {
+        font-size: 2em;
+        white-space: nowrap;
+        letter-spacing: 10px;
+    }
+
+    .header-text {
+        font-size: 1em;
+        letter-spacing: 4px;
+        white-space: nowrap;
+    }
+    .profile-picture {
+        margin-left: -5%;
+    }
+    .profile-img {
+        max-width: 200px;
+        border-radius: 10%;
+    }
+} */
+/* @media (max-width: 320px) {
+    .header-name {
+        position: absolute;
+        top: 28%;
+        left: 10px;
+        translate: transform(-50%, -50%);
+        font-size: 1.2em;
+        font-weight: 700;
+        line-height: 5;
+    }
+    .header-text {
+        position: absolute;
+        top: 25%;
+        left: 7px;
+        font-size: 0.9em;
+        translate: transform(-50%, -50%);
+    
+    }
+    .profile-picture {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        translate: transform(-50%, -50%);
+    }
+    .profile-img {
+        max-width: 10em;
+
+    }
+} */
+@media (max-width: 360px) {
+    .home {
+    }
+    .header-name {
+        position: absolute;
+        top: 40%;
+        left: 0.5em;
+        translate: transform(-50%, -50%);
+        font-size: 1.8em;
+        letter-spacing: 8px;
+        font-weight: 400;
+    }
+    .header-text {
+        position: absolute;
+        top: 35%;
+        left: 13px;
+        font-size: 1.1em;
+        translate: transform(-50%, -50%);
+        font-weight: 400;
+        letter-spacing: 5px;
+        line-height: 1.2;
+    }
+    .profile-picture {
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        translate: transform(-50%, -50%);
+    }
+    .profile-img {
+        max-width: 10em;
+
     }
 }
 </style>

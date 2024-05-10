@@ -2,13 +2,13 @@
     <div class="dropdown-container">
         <div class="dropdown" @mouseover="openDropdown" @mouseleave="closeDropdown">
             <div class="dropdown-toggle">
-                <span class="dropdown-icon" :class="{ 'open': isDropdownOpen }">➤</span>
+                <span class="dropdown-icon" :class="{ 'open': isDropdownOpen }">›</span>
             </div>
             <ul class="dropdown-menu" :class="{ 'show': isDropdownOpen }">
                 <li><a href="#home" @click="scrollToSection">Home</a></li>
                 <li><a href="#about" @click="scrollToSection">About</a></li>
-                <li><a href="#contact" @click="scrollToSection">Contact</a></li>
                 <li><a href="#projects" @click="scrollToSection">Projects</a></li>
+                <li><a href="#contact" @click="scrollToSection">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -40,47 +40,44 @@ export default {
 </script>
 
 <style scoped>
-.dropdown-container {
+/* .dropdown-container {
     position: relative;
-}
+} */
 
 .dropdown {
     position: absolute;
-    top: 0px;
-    right: 10%;
-    cursor: default; /* Change cursor to default when list is hidden */
+    cursor: default;
+    /* Change cursor to default when list is hidden */
 }
 
 .dropdown-menu {
     position: absolute;
-    top: 35px;
-    left: -75px;
+    top: -0.8rem;
+    left: 0.5rem;
     width: 200px;
     opacity: 0;
     padding: 0;
-    align-items: center;
-    text-align: center;
-    list-style-type: none;
-    text-transform: uppercase;
-    pointer-events: none;
-    overflow:hidden;
-    font-weight: 600;
-    font-size: 22px;
-    transition: opacity 0.3s ease;
+    font-weight: 700;
+    font-size: 1rem;
     border: 2px solid var(--lightest-gray);
     background-color: rgb(17, 17, 17);
-
+    list-style-type: none;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
 }
 
 .dropdown-menu.show {
     opacity: 1;
     color: var(--white);
     height: auto;
-    pointer-events: auto; /* Enable pointer events when list is shown */
+    pointer-events: auto;
+    /* Enable pointer events when list is shown */
 }
 
-.dropdown-menu.show li {
-    transition: color 0.3s ease-in;
+.dropdown-menu li {
+    padding: 10px 0;
+    margin-bottom: 0;
 }
 
 .dropdown-menu.show li:hover {
@@ -89,55 +86,67 @@ export default {
 }
 
 .dropdown-icon {
-    font-size: 3em;
-    color: var(--white);
-    transition: color 0.5s ease-in;
-    text-shadow: 1px 1px 10px #9ad7ff;
-    display: inline-block;
+    position: absolute;
+    top: -0.93em;
+    left: 1em;
+    font-size: 5.5em;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px #9ad7ff;
     transform: rotate(90deg);
+    transition: color 0.5s ease-in;
 }
 
-.dropdown-icon:hover {
+.dropdown-icon.open {
+    color: var(--blue-heaven);
+    transition: color 0.5s ease-in-out;
+}
+
+.dropdown-menu a,
+.dropdown-menu a:visited {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2em;
+    letter-spacing: 5px;
+    font-weight: 400;
+    transition: color 0.3s ease-in;
+}
+
+.dropdown-menu a:hover {
     color: var(--blue-heaven);
     transition: color 0.3s ease-in-out;
 }
 
 a,
 a:visited {
-    color: inherit; /* Keeps the same color as the normal link */
+    color: inherit;
+    /* Keeps the same color as the normal link */
     text-decoration: none;
 }
 
-@media (max-width: 1366px) {
-
-    .dropdown {
-        right: 15%;
-        
-    }
+@media (max-width: 360px) {
     .dropdown-icon {
-        font-size: 3em !important;
-        color: var(--white);
-        transition: color 0.5s ease-in;
-        text-shadow: 1px 1px 10px #9ad7ff;
-        display: inline-block;
-        transform: rotate(90deg);
-    }
-    .dropdown .dropdown-menu {
+        font-size: 5em;
         position: absolute;
-        top: 85% !important;
-        left: 35% !important;
-        transform: translateX(-50%);
-        font-size: 1em;
-        padding: 1rem;
+        left: 25px;
+        bottom: -10px;
     }
-    .dropdown-menu.show li:hover {
-        color: var(--blue-heaven);
-        transition: color 0.3s ease-in-out;
-    }
-    .dropdown-menu li {
-        margin-bottom: 15px;
-    }
-
-
 }
+@media (max-width: 414px) {
+    span.dropdown-icon {
+        font-size: 4em !important;
+        position: absolute;
+        left: 0.5em;
+        top: -1.07em;
+    }
+}
+
+@media (max-width: 1366px) {
+    .dropdown-icon {
+        font-size: 5em !important;
+    }
+}
+
+
 </style>
