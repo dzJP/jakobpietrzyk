@@ -142,5 +142,11 @@ a:visited {
     }
 }
 
+@media (max-width: 1366px) {
+    .dropdown-icon {
+        font-size: 5em !important;
+    }
+}
+
 
 </style>

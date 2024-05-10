@@ -93,46 +93,7 @@ section {
     padding: 2rem 10% 1rem;
 }
 
-@media (max-width: 1366px) {
-    section {
-        padding: 2rem 10% 6rem !important;
-    }
-
-    .skills-box {
-        padding: 5px 1% 2rem !important;
-    }
-
-    .heading {
-
-        margin-bottom: 15%;
-    }
-
-    span {
-        font-size: 0.5em !important;
-        letter-spacing: 10px;
-        font-weight: 700;
-        text-shadow: 1px 1px 2px color #ffffff;
-    }
-
-    .skills-box h3,
-    .skills-box p {
-        margin: 25px;
-
-    }
-
-    .skills-box p {
-        font-size: 0.9em;
-    }
-
-    .button {
-        font-size: 1em;
-        letter-spacing: 5px !important;
-    }
-
-}
-
 @media (max-width: 360px) {
-
     .heading {
         text-align: center;
         font-size: 4.5rem;
@@ -141,7 +102,6 @@ section {
     .skills-box {
         padding: 0 !important;
     }
-
 
     span {
         font-size: 1em !important;
