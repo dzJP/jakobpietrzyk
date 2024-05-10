@@ -367,7 +367,7 @@ a.link {
         font-weight: 700;
         font-size: 2em;
         letter-spacing: 5px;
-        margin-top: 5%;
+        margin-top: 35%;
     }
 
     .project-image:hover img,

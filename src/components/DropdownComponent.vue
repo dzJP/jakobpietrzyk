@@ -52,7 +52,7 @@ export default {
 
 .dropdown-menu {
     position: absolute;
-    top: -0.5rem;
+    top: -0.8rem;
     left: 0.5rem;
     width: 200px;
     opacity: 0;
@@ -87,10 +87,10 @@ export default {
 
 .dropdown-icon {
     position: absolute;
-    top: -0.75em;
-    left: 0.65em;
-    font-size: 8em;
-    font-weight: 700;
+    top: -0.93em;
+    left: 1em;
+    font-size: 5.5em;
+    font-weight: 600;
     text-shadow: 1px 1px 5px #9ad7ff;
     transform: rotate(90deg);
     transition: color 0.5s ease-in;

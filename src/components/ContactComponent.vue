@@ -8,8 +8,8 @@
             <div class="contact-box">
                 <div class="contact-icon1">
                     <a href="https://www.linkedin.com/in/jakob-pietrzyk-726949105">Linkedin</a>
-                    <p>Jakob_pietrzyk@outlook.com</p>
                     <p>0763291108</p>
+                    <p>Jakob_pietrzyk@outlook.com</p>
                 </div>
             </div>
         </div>
@@ -128,6 +128,11 @@ section {
         font-size: 2rem !important;
     }
 
+    .contact h2.heading {
+        margin-top: 2.5em;
+        padding-bottom: 0.5em;
+    }
+
     .contact {
         border-top: solid 1px var(--lightest-gray);
     }
@@ -135,14 +140,7 @@ section {
     .contact-box h3,
     .contact-box p,
     .contact-box a {
-        color: var(--white);
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        font-size: 2em;
-        letter-spacing: 5px;
-        font-weight: 400;
-        text-shadow: 1px 1px 2px var(--orange);
+        font-size: 1em;
     }
 
 }

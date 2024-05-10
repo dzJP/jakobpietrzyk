@@ -12,9 +12,11 @@
                 <span class="cursor" :class="{ 'blink': showCursor }"></span>
             </h3>
             <p>
-                I'm a dedicated and highly motivated Java programmer with a strong background in Java programming, database development, and web development.
+                I'm a dedicated and highly motivated Java programmer with a strong background in Java programming,
+                database development, and web development.
                 Skilled in Java, JavaScript, and proficient in utilizing a diverse array of frameworks and tools.
-				With a desire to learn, I'm always seeking for opportunities to expand my existing knowledge and skill set.
+                With a desire to learn, I'm always seeking for opportunities to expand my existing knowledge and skill
+                set.
             </p>
             <a href="#contact" class="button">Contact me</a>
         </div>
@@ -26,7 +28,6 @@ export default {
     data() {
         return {
             messages: [
-                "Hi, I'm Jakob.",
                 "Java Full Stack Developer",
                 "Frontend Developer",
                 "Backend Developer"
@@ -102,6 +103,7 @@ export default {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 2px;
+    text-transform: none;
 }
 
 .about-content p {
@@ -205,7 +207,7 @@ span {
 }
 
 @media (max-width: 1366px) {
-    
+
     .about-content span {
         font-size: 1em !important;
     }
@@ -239,8 +241,9 @@ span {
         font-size: 1.2rem;
         letter-spacing: 2px;
         margin: 2rem 0 3rem;
-        
+
     }
+
     .about-img {
         display: none;
     }
@@ -249,6 +252,7 @@ span {
         display: inline-block;
     }
 }
+
 @media (max-width: 768px) {
 
     .about-content {
@@ -273,8 +277,9 @@ span {
         font-size: 1.2rem;
         letter-spacing: 2px;
         margin: 2rem 0 3rem;
-        
+
     }
+
     .about-img {
         display: none;
     }
@@ -283,7 +288,8 @@ span {
         display: inline-block;
     }
 }
-    /* .about-img img {
+
+/* .about-img img {
         width: 100%;
         height: 200px;
         display: block;
@@ -292,5 +298,23 @@ span {
         border-radius: 0;
         animation: none !important;
     } */
-
+@media (max-width: 768px) {
+    
+    .about-content p {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+    .about-content h2 {
+        margin: 3em 0;
+        animation: none !important;
+        white-space: nowrap;
+    }
+    .about-content p {
+        margin-bottom: 0.2em;
+        
+    }
+    .button {
+        margin: 4em 0;
+    }
+}
 </style>
