@@ -115,21 +115,26 @@ export default {
 }
 
 .btn {
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    background-color: var(--blue);
-    color: var(--white);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 0 1rem var(--light-blue-hover);
+    text-decoration: none;
+    letter-spacing: 4px;
+    background-color: var(--blue-sky);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--blue-heaven-hover);
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: var(--light-blue-hover);
+    background-color: var(--blue-sky-hover);
 }
 
 @media (max-width: 360px)  {
