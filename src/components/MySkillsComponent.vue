@@ -96,28 +96,44 @@ section {
 @media (max-width: 360px) {
     .heading {
         text-align: center;
-        font-size: 4.5rem;
+        font-size: 2.5rem;
+        margin: 30% 0;
+        white-space: nowrap;
+    }
+
+    .skills-container {
+        margin: 40% 0;
     }
 
     .skills-box {
-        padding: 0 !important;
+        padding: 1rem !important;
+        flex: 1 1 calc(100% - 2rem) !important;
     }
-
-    span {
-        font-size: 1em !important;
-        letter-spacing: 10px;
-        font-weight: 700;
-        text-shadow: 1px 1px 2px color #ffffff;
+    .skills-box h3 {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+    .skills-box p {
+        font-size: 0.87em;
+        margin: 20px 0;
     }
 
     .skills-box a.button {
-        margin: 35px 15px;
-        
+        margin: 10px 0;
+        padding: 8px 14px;
+        font-size: 0.85em;
     }
 
-    .skills-box p {
-        font-size: 1em;
-        letter-spacing: 2px;
+    .skills-box:nth-child(1) {
+        order: 3;
+    }
+
+    .skills-box:nth-child(2) {
+        order: 2;
+    }
+
+    .skills-box:nth-child(3) {
+        order: 1;
     }
 
 }

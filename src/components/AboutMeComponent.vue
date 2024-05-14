@@ -265,20 +265,35 @@ span {
 @media (max-width: 360px) {
     .about-content h2 {
         position:absolute;
-        top: 12em;
+        top: 17.5em;
         left: 50%;
         transform: translate(-50%, -50%);
         animation: none !important;
         white-space: nowrap;
     }
     .about-content h3 {
-        font-size: 1em;
-        margin-top: 12em;
+        position: absolute;
+        bottom: -40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
 
     }
     .about-content p {
+        position: absolute;
+        left: 0;
+        bottom: -90%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        justify-content: center;
         font-size: 1em;
     }
-
+    .about-content .button {
+        position:absolute;
+        top: 192%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
 }
 </style>

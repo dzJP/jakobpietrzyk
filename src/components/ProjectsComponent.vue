@@ -367,13 +367,13 @@ a.link {
         font-weight: 700;
         font-size: 2em;
         letter-spacing: 5px;
-        margin-top: 4em !important;
+        margin: 30% 0;
     }
 
     .project-image:hover img,
     .project-video:hover video {
         opacity: 1;
-        transform: scale(1.5);
+        transform: scale(1.35);
     }
 
     .project-image img,
@@ -402,7 +402,6 @@ a.link {
     }
 
     .navigation-buttons button {
-        color: var(--white);
         background-color: var(--orange);
         font-size: 1.5em;
         text-align: center;
@@ -427,6 +426,7 @@ a.link {
         width: 100%;
         margin-left: 15px;
         letter-spacing: 2px;
+        font-size: 1em;
         text-align: center;
         color: white;
         z-index: -2;
