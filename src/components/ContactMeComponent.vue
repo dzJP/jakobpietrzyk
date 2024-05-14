@@ -115,20 +115,71 @@ export default {
 }
 
 .btn {
-    padding: 0.5rem 2rem;
-    font-size: 1rem;
-    background-color: var(--light-blue);
-    color: var(--white);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 0 1rem var(--light-blue-hover);
+    text-decoration: none;
+    letter-spacing: 4px;
+    background-color: var(--blue-sky);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0 1rem var(--blue-heaven-hover);
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: var(--light-blue-hover);
+    background-color: var(--blue-sky-hover);
+}
+
+@media (max-width: 360px)  {
+
+    .contact-container {
+        padding: 10rem 5% 2rem;
+
+    }
+    .contact-form {
+        max-width: 90%;
+        margin-top: 30%;
+    }
+
+    .input-box {
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+    }
+
+    .input-box input[type="text"],
+    .input-box input[type="email"],
+    .input-box input[type="tel"],
+    .input-box textarea {
+        margin: 5px 0;
+        width: 100%;
+
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        display: inline-block;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 3px;
+        background-color: var(--blue-sky);
+        border-radius: 5px;
+        border: none;
+        transition: background-color 0.5s ease;
+        box-shadow: 0 0 1rem var(--blue-heaven-hover);
+
+    }
+
 }
 </style>
