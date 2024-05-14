@@ -1,19 +1,19 @@
-<!-- <template>
+<template>
     <div id="contact" class="contact-container">
         <div class="contact-me-header">
             Contact me
         </div>
         <form id="contactForm" class="contact-form" @submit.prevent="submitForm">
             <div class="input-box">
-                <input type="text" name="fullName" id="fullName" placeholder="Name">
-                <input type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
+                <input v-model="formData.name" type="text" name="fullName" id="fullName" placeholder="Name">
+                <input v-model="formData.email" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
             </div>
             <div class="input-box">
-                <input type="tel" name="number" placeholder="Phonenumber" pattern="[+]?[0-9]+(\.[0-9]{1,2})?">
-                <input type="text" name="emailSubject" placeholder="Subject">
+                <input v-model="formData.phoneNumber" type="tel" name="number" placeholder="Phonenumber" pattern="[+]?[0-9]+(\.[0-9]{1,2})?">
+                <input v-model="formData.subject" type="text" name="emailSubject" placeholder="Subject">
             </div>
             <div class="input-box">
-                <textarea name="emailMessage" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <textarea v-model="formData.message" name="emailMessage" id="" cols="30" rows="10" placeholder="Message"></textarea>
             </div>
             <input type="submit" value="Submit" class="btn" name="send">
         </form>
@@ -21,22 +21,37 @@
 </template>
 
 <script>
+
+import axios from "axios";
 export default {
     data() {
         return {
             formData: {
                 name: '',
                 email: '',
-                message: ''
+                phoneNumber: '',
+                subject: '',
+                message:''
             }
         };
     },
     methods: {
-        submitForm() {
+        async submitForm() {
             console.log('Form submitted:', this.formData);
+            try {
+                const response = await axios.post(
+                    'https://portfolio-jakob.azurewebsites.net/api/v1/submitContactForm',
+                    this.formData
+                );
+                console.log('Server response:', response.data);
+            } catch (error) {
+                console.error('Error submitting form:', error);
+            }
             this.formData = {
                 name: '',
                 email: '',
+                phoneNumber:'',
+                subject:'',
                 message: ''
             };
         }
@@ -116,4 +131,4 @@ export default {
 .btn:hover {
     background-color: var(--light-blue-hover);
 }
-</style> -->
+</style>

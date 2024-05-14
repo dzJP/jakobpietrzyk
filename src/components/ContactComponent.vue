@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <section class="contact" id="contact">
         <h2 class="heading">
             <span>Contact</span>
@@ -149,4 +149,4 @@ section {
         padding-bottom: 1.5em !important;
     }
 }
-</style>
+</style> -->
