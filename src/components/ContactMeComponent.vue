@@ -42,7 +42,7 @@ export default {
             console.log('Form submitted:', this.formData);
             try {
                 const response = await axios.post(
-                    'http://localhost:8080/api/v1/submitContactForm',
+                    'https://portfolio-jakob.azurewebsites.net/api/v1/submitContactForm',
                     this.formData
                 );
                 console.log('Server response:', response.data);
