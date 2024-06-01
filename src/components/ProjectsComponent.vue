@@ -2,116 +2,25 @@
     <div id="projects" class="project-section-container">
         <div class="project-section-title">My projects</div>
         <div class="projects">
-            <div class="project">
-                <div class="project-image" :class="{ 'expanded': isImageExpanded }" @mouseleave="handleMouseLeave"
-                    @mouseover="expandImage">
-                    <img :src="currentImage" alt="project-image">
-                    <div class="overlay-text" v-if="!isImageExpanded">Intranet development</div>
-                    <div class="project-description" v-if="!isImageExpanded">
-                        A secure and efficient internal network for streamlined communication, collaboration, and
-                        information
-                        sharing.
-                    </div>
-                    <div class="navigation-buttons">
-                        <button class="previous-button" @click="navigate('previous')">Previous</button>
-                        <button class="next-button" @click="navigate('next')">Next</button>
-                    </div>
-                </div>
-                <div class="link-to-repo">
-                    <a href="https://github.com/dzJP/intranet">Repository</a>
-                </div>
-            </div>
-            <div class="project">
-                <div class="project-video">
-                    <video controls>
-                        <source src="@/assets/worldwidepancakes.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="overlay-text" v-if="!isImageExpanded">World Wide Pancakes</div>
-                    <div class="project-description" v-if="!isImageExpanded">
-                        World Wide Pancakes is a web app where pancake enthusiasts can discover, share, and connect over
-                        delicious
-                        recipes.
-                    </div>
-                </div>
-                <div class="link-to-repo">
-                    <a href="https://github.com/dzJP/worldwidepancakes">Repository</a>
-                </div>
-            </div>
+            <IntranetProject />
+            <WorldWidePancakesProject />
+            <WebShopProject />
         </div>
     </div>
 </template>
 <script>
+import IntranetProject from '@/components/IntranetProject.vue';
+import WorldWidePancakesProject from '@/components/WorldWidePancakesProject.vue';
+import WebShopProject from '@/components/WebShopProject.vue';
+
 export default {
-    data() {
-        return {
-            images: [
-                require('@/assets/login.png'),
-                require('@/assets/forgotPassword.png'),
-                require('@/assets/receivedPassword.png'),
-                require('@/assets/homepageUser.png'),
-                require('@/assets/adminpage.png'),
-                require('@/assets/adminpageInviteUsers.png'),
-                require('@/assets/receivedInvitation.png'),
-                require('@/assets/signuppage.png'),
-                require('@/assets/adminpageCreateNews.png'),
-                require('@/assets/adminpageCreatedNews.png'),
-                require('@/assets/adminpageLatestNews.png'),
-                require('@/assets/adminpageOldestNews.png'),
-                require('@/assets/adminpageSearchNews1.png'),
-                require('@/assets/adminpageSearchNews2.png'),
-                require('@/assets/adminpageEditNews.png'),
-                require('@/assets/adminpageEditedNews.png'),
-                require('@/assets/adminpageSelectedNews.png'),
-                require('@/assets/adminpageNewsNavigate1.png'),
-                require('@/assets/adminpageNewsNavigate2.png'),
-                require('@/assets/receivedSharedNews.png'),
-                require('@/assets/adminpageEditUser.png'),
-                require('@/assets/adminpageEditUserPopup1.png'),
-                require('@/assets/adminpageEditUserPopup2.png'),
-                require('@/assets/adminpageEditedUser.png'),
-                require('@/assets/adminpageCreateProject.png'),
-                require('@/assets/adminpageEditProject.png'),
-                require('@/assets/homepageAdminRegisterHours.png'),
-                require('@/assets/profilePage.png'),
-                require('@/assets/colleaguesPage.png')
-            ],
-            currentImageIndex: 0,
-            isImageExpanded: false,
-        }
-    },
-    computed: {
-        currentImage() {
-            return this.images[this.currentImageIndex];
-        },
-    },
-    methods: {
-        toggleImageSize(event) {
-            // Check if the click event originates from the image itself
-            if (event.target.tagName.toLowerCase() === 'img') {
-                // Toggle the state of isImageExpanded
-                this.isImageExpanded = !this.isImageExpanded;
-                const overlayText = document.querySelector('.overlay-text');
-                if (overlayText) {
-                    overlayText.style.display = this.isImageExpanded ? 'none' : 'block';
-                }
-            }
-        },
-        navigate(direction) {
-            if (direction === 'previous') {
-                this.currentImageIndex = (this.currentImageIndex - 1 + this.images.length) % this.images.length;
-            } else if (direction === 'next') {
-                this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
-            }
-        },
-        handleMouseLeave(event) {
-            const expandedImage = document.querySelector('.project-image.expanded');
-            if (expandedImage && !expandedImage.contains(event.relatedTarget)) {
-                this.isImageExpanded = false;
-            }
-        }
-    },
-};
+    components: {
+        IntranetProject,
+        WorldWidePancakesProject,
+        WebShopProject,
+    }
+}
+
 </script>
 <style>
 .project-section-container {
@@ -139,7 +48,9 @@ export default {
 .projects {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: flex-end;
+    gap: 4rem;
     padding: 20px;
     width: 75%;
     padding: 5%;
@@ -149,6 +60,7 @@ export default {
 .project {
     position: relative;
     z-index: 1;
+    margin-bottom: 15%;
 }
 
 .project-image img,
